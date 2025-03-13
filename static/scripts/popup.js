@@ -41,15 +41,15 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
     `).join('');
 
     const firstLevel = entry.levels && entry.levels.length > 0 ? entry.levels[0] : {};
-
+    stormName = entry.basic_info.storm_name.charAt(0).toUpperCase() + entry.basic_info.storm_name.slice(1);
     // Thumbnail data
     const thumbnails = [
-        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.png`, alt: "Skew-T", header: "Skew-T" },
-        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
-        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
-        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
-        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_theta.png`, alt: "Thermodynamics", header: "Theta" },
-        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.png`, alt: "Skew-T", header: "Skew-T" },
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_theta.png`, alt: "Thermodynamics", header: "Theta" },
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
     ];
 
     const itemsPerPage = 3;
