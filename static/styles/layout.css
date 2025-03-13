@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(45deg, #2196F3, #673AB7);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    width: 80%;
+    height: 100%;
+}

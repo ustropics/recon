@@ -1,0 +1,394 @@
+/* map.css */
+.custom-arrow {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.material-popup {
+    font-family: 'Roboto', sans-serif;
+    width: 420px !important;
+    padding: 12px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Scrollbar Styling for material-popup */
+.material-popup::-webkit-scrollbar {
+    width: 8px;
+}
+
+.material-popup::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.material-popup::-webkit-scrollbar-thumb {
+    background: #2196F3;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.material-popup::-webkit-scrollbar-thumb:hover {
+    background: #673AB7;
+}
+
+.material-popup {
+    scrollbar-width: thin;
+    scrollbar-color: #2196F3 #f1f1f1;
+}
+
+.popup-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+    margin-bottom: 12px;
+    max-width: 396px; /* 420px - 24px padding */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-img {
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.header-img h3 {
+    margin: 0 0 1px 0;
+    font-size: 1.4em;
+}
+
+.header-img p {
+    margin: 0px 0;
+    font-size: 1em;
+}
+
+.thumbnail-carousel {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center everything horizontally */
+    width: 400px; /* Matches popup width minus padding */
+    box-sizing: border-box;
+}
+
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    width: 400px; /* 3 × 120px + 2 × 7px = 360px */
+    overflow: hidden;
+}
+
+.thumbnail {
+    width: 126px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.thumbnail:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+.thumbnail-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.carousel-controls {
+    margin-top: 2px; /* Space between thumbnails and controls */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between buttons */
+}
+
+.carousel-arrow {
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px; /* Rounded square */
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.carousel-arrow:hover {
+    background: #1976D2; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.carousel-page-btn {
+    background: #f5f5f5; /* Light gray background */
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Rounded square */
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-page-btn:hover {
+    background: #e0e0e0; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.carousel-page-btn.active {
+    background: #2196F3; /* Match arrow color for active state */
+    color: white;
+    border-color: #2196F3;
+    font-weight: bold;
+}
+
+.carousel-page-btn.active:hover {
+    background: #1976D2; /* Darker blue on hover for active state */
+}
+
+.popup-section {
+    margin-bottom: 12px;
+    max-width: 396px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popup-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    color: #444;
+    cursor: pointer;
+}
+
+.popup-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4px 12px;
+    border-top: 1px solid #eee;
+}
+
+.popup-row span:first-child {
+    color: #666;
+    font-weight: 500;
+}
+
+.popup-row span:last-child {
+    text-align: right;
+    color: #333;
+}
+
+/* Collapsible Sections */
+.collapsible .collapsible-content {
+    display: none;
+    padding: 0 12px;
+}
+
+.collapsible.active .collapsible-content {
+    display: block;
+}
+
+.collapsible-header::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.2s;
+}
+
+.collapsible.active .collapsible-header::before {
+    transform: rotate(90deg);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f5f5f5;
+    font-weight: 500;
+    color: #444;
+}
+
+td {
+    color: #333;
+}
+
+/* Leaflet Popup Adjustments */
+.leaflet-popup {
+    max-width: 420px !important;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0;
+    overflow-x: hidden !important;
+    max-width: 420px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.leaflet-popup-content {
+    margin: 0 !important; /* Override Leaflet’s default margin */
+    width: 420px !important; /* Explicitly match .material-popup */
+    max-width: 420px !important;
+    box-sizing: border-box;
+}
+
+/* Stylized Scrollbar for Leaflet Popup when scrolled */
+.leaflet-popup-content.leaflet-popup-scrolled {
+    width: 420px !important; /* Force scrolled state to match */
+    max-width: 420px !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important; /* Ensure vertical scrolling is enabled */
+}
+
+/* Webkit Scrollbar Styling */
+.leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar {
+    width: 10px; /* Slightly wider for visibility */
+}
+
+.leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar-track {
+    background: #f5f5f5; /* Light gray to match theme */
+    border-radius: 6px; /* Rounded edges */
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+    margin: 4px 0; /* Small margin from top/bottom */
+}
+
+.leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar-thumb {
+    background: #2196F3; /* Blue to match theme */
+    border-radius: 6px; /* Rounded edges */
+    border: 2px solid #f5f5f5; /* Border matches track */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar-thumb:hover {
+    background: #1976D2; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight scale-up */
+}
+
+.leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar-thumb:active {
+    background: #1565C0; /* Even darker blue when clicked */
+}
+
+/* Firefox Scrollbar Styling */
+.leaflet-popup-content.leaflet-popup-scrolled {
+    scrollbar-width: thin; /* Slim scrollbar */
+    scrollbar-color: #2196F3 #f5f5f5; /* Thumb blue, track light gray */
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+    border-radius: 6px;
+}
+
+.leaflet-popup-close-button {
+    left: -3px !important; /* Moved to the far left */
+    top: -2px !important;
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 16px !important;
+    padding: 0 !important;
+    line-height: 20px !important;
+    box-sizing: border-box;
+}
+
+/* Image Popup Styles */
+.image-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-image {
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup-thumbnail-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.popup-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.popup-thumbnail:hover {
+    opacity: 1;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+.popup-close-btn:hover {
+    background: #ddd;
+}

@@ -1,0 +1,511 @@
+[
+    {
+        "storm_name": "Alberto",
+        "array_of_missions": [
+            {
+                "filename": "202401.json",
+                "mission_number": "01",
+                "plane_id": "AF302",
+                "number_of_observations": 22,
+                "start_time": "2024-06-17T1742",
+                "end_time": "2024-06-17T2221",
+                "central_coordinates": {
+                    "latitude": 21.55909090909091,
+                    "longitude": 92.68181818181819
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202402.json",
+                "mission_number": "02",
+                "plane_id": "AF301",
+                "number_of_observations": 22,
+                "start_time": "2024-06-18T1010",
+                "end_time": "2024-06-18T1530",
+                "central_coordinates": {
+                    "latitude": 22.581818181818182,
+                    "longitude": 94.2090909090909
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202403.json",
+                "mission_number": "03",
+                "plane_id": "AF308",
+                "number_of_observations": 25,
+                "start_time": "2024-06-18T2254",
+                "end_time": "2024-06-19T0441",
+                "central_coordinates": {
+                    "latitude": 23.204,
+                    "longitude": 93.672
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202404.json",
+                "mission_number": "04",
+                "plane_id": "AF308",
+                "number_of_observations": 23,
+                "start_time": "2024-06-19T1125",
+                "end_time": "2024-06-19T1602",
+                "central_coordinates": {
+                    "latitude": 24.121739130434783,
+                    "longitude": 94.3391304347826
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202405.json",
+                "mission_number": "05",
+                "plane_id": "AF306",
+                "number_of_observations": 6,
+                "start_time": "2024-06-19T2143",
+                "end_time": "2024-06-20T0457",
+                "central_coordinates": {
+                    "latitude": 22.55,
+                    "longitude": 94.78333333333333
+                },
+                "max_wind_speed": 99
+            }
+        ]
+    },
+    {
+        "storm_name": "Beryl",
+        "array_of_missions": [
+            {
+                "filename": "202401.json",
+                "mission_number": "01",
+                "plane_id": "AF300",
+                "number_of_observations": 5,
+                "start_time": "2024-06-30T1040",
+                "end_time": "2024-06-30T1204",
+                "central_coordinates": {
+                    "latitude": 10.84,
+                    "longitude": 53.699999999999996
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202402.json",
+                "mission_number": "02",
+                "plane_id": "NOAA3",
+                "number_of_observations": 35,
+                "start_time": "2024-06-30T0950",
+                "end_time": "2024-06-30T1601",
+                "central_coordinates": {
+                    "latitude": 11.548571428571428,
+                    "longitude": 55.885714285714286
+                },
+                "max_wind_speed": 114
+            },
+            {
+                "filename": "202403.json",
+                "mission_number": "03",
+                "plane_id": "NOAA2",
+                "number_of_observations": 21,
+                "start_time": "2024-06-30T2155",
+                "end_time": "2024-07-01T0116",
+                "central_coordinates": {
+                    "latitude": 11.176190476190476,
+                    "longitude": 57.2047619047619
+                },
+                "max_wind_speed": 119
+            },
+            {
+                "filename": "202404.json",
+                "mission_number": "04",
+                "plane_id": "AF306",
+                "number_of_observations": 21,
+                "start_time": "2024-06-30T2141",
+                "end_time": "2024-07-01T0502",
+                "central_coordinates": {
+                    "latitude": 11.633333333333333,
+                    "longitude": 58.20952380952381
+                },
+                "max_wind_speed": 111
+            },
+            {
+                "filename": "202405.json",
+                "mission_number": "05",
+                "plane_id": "NOAA3",
+                "number_of_observations": 22,
+                "start_time": "2024-07-01T0914",
+                "end_time": "2024-07-01T1321",
+                "central_coordinates": {
+                    "latitude": 11.968181818181819,
+                    "longitude": 60.31363636363636
+                },
+                "max_wind_speed": 140
+            },
+            {
+                "filename": "202406.json",
+                "mission_number": "06",
+                "plane_id": "AF301",
+                "number_of_observations": 20,
+                "start_time": "2024-07-01T1053",
+                "end_time": "2024-07-01T1702",
+                "central_coordinates": {
+                    "latitude": 12.35,
+                    "longitude": 61.14
+                },
+                "max_wind_speed": 150
+            },
+            {
+                "filename": "202407.json",
+                "mission_number": "07",
+                "plane_id": "NOAA2",
+                "number_of_observations": 34,
+                "start_time": "2024-07-01T2304",
+                "end_time": "2024-07-02T0522",
+                "central_coordinates": {
+                    "latitude": 13.926470588235293,
+                    "longitude": 64.65294117647059
+                },
+                "max_wind_speed": 170
+            },
+            {
+                "filename": "202408.json",
+                "mission_number": "08",
+                "plane_id": "NOAA3",
+                "number_of_observations": 27,
+                "start_time": "2024-07-02T0913",
+                "end_time": "2024-07-02T1428",
+                "central_coordinates": {
+                    "latitude": 14.988888888888889,
+                    "longitude": 67.8
+                },
+                "max_wind_speed": 182
+            },
+            {
+                "filename": "202409.json",
+                "mission_number": "09",
+                "plane_id": "AF300",
+                "number_of_observations": 17,
+                "start_time": "2024-07-02T1101",
+                "end_time": "2024-07-02T1702",
+                "central_coordinates": {
+                    "latitude": 15.31764705882353,
+                    "longitude": 68.47647058823529
+                },
+                "max_wind_speed": 158
+            },
+            {
+                "filename": "202410.json",
+                "mission_number": "10",
+                "plane_id": "NOAA9",
+                "number_of_observations": 36,
+                "start_time": "2024-07-02T1755",
+                "end_time": "2024-07-03T0021",
+                "central_coordinates": {
+                    "latitude": 17.15277777777778,
+                    "longitude": 70.81666666666666
+                },
+                "max_wind_speed": 75
+            },
+            {
+                "filename": "202411.json",
+                "mission_number": "11",
+                "plane_id": "AF302",
+                "number_of_observations": 18,
+                "start_time": "2024-07-02T1930",
+                "end_time": "2024-07-03T0421",
+                "central_coordinates": {
+                    "latitude": 16.666666666666668,
+                    "longitude": 73.10555555555555
+                },
+                "max_wind_speed": 151
+            },
+            {
+                "filename": "202412.json",
+                "mission_number": "12",
+                "plane_id": "NOAA2",
+                "number_of_observations": 21,
+                "start_time": "2024-07-02T2330",
+                "end_time": "2024-07-03T0233",
+                "central_coordinates": {
+                    "latitude": 16.042857142857144,
+                    "longitude": 72.15714285714286
+                },
+                "max_wind_speed": 148
+            },
+            {
+                "filename": "202413.json",
+                "mission_number": "13",
+                "plane_id": "NOAA3",
+                "number_of_observations": 20,
+                "start_time": "2024-07-03T1052",
+                "end_time": "2024-07-03T1341",
+                "central_coordinates": {
+                    "latitude": 16.815,
+                    "longitude": 75.375
+                },
+                "max_wind_speed": 152
+            },
+            {
+                "filename": "202414.json",
+                "mission_number": "14",
+                "plane_id": "AF306",
+                "number_of_observations": 27,
+                "start_time": "2024-07-03T1109",
+                "end_time": "2024-07-03T1723",
+                "central_coordinates": {
+                    "latitude": 17.103703703703705,
+                    "longitude": 75.84074074074074
+                },
+                "max_wind_speed": 144
+            },
+            {
+                "filename": "202415.json",
+                "mission_number": "15",
+                "plane_id": "NOAA9",
+                "number_of_observations": 25,
+                "start_time": "2024-07-03T1807",
+                "end_time": "2024-07-03T2253",
+                "central_coordinates": {
+                    "latitude": 17.696,
+                    "longitude": 77.276
+                },
+                "max_wind_speed": 67
+            },
+            {
+                "filename": "202416.json",
+                "mission_number": "16",
+                "plane_id": "NOAA2",
+                "number_of_observations": 21,
+                "start_time": "2024-07-03T2206",
+                "end_time": "2024-07-04T0117",
+                "central_coordinates": {
+                    "latitude": 17.80952380952381,
+                    "longitude": 78.34761904761905
+                },
+                "max_wind_speed": 130
+            },
+            {
+                "filename": "202417.json",
+                "mission_number": "17",
+                "plane_id": "AF300",
+                "number_of_observations": 18,
+                "start_time": "2024-07-03T2315",
+                "end_time": "2024-07-04T0513",
+                "central_coordinates": {
+                    "latitude": 18.127777777777776,
+                    "longitude": 78.87777777777778
+                },
+                "max_wind_speed": 125
+            },
+            {
+                "filename": "202418.json",
+                "mission_number": "18",
+                "plane_id": "AF302",
+                "number_of_observations": 17,
+                "start_time": "2024-07-04T1130",
+                "end_time": "2024-07-04T1702",
+                "central_coordinates": {
+                    "latitude": 19.08235294117647,
+                    "longitude": 82.24705882352941
+                },
+                "max_wind_speed": 110
+            },
+            {
+                "filename": "202419.json",
+                "mission_number": "19",
+                "plane_id": "NOAA3",
+                "number_of_observations": 20,
+                "start_time": "2024-07-04T0938",
+                "end_time": "2024-07-04T1300",
+                "central_coordinates": {
+                    "latitude": 18.695,
+                    "longitude": 81.565
+                },
+                "max_wind_speed": 115
+            },
+            {
+                "filename": "202420.json",
+                "mission_number": "20",
+                "plane_id": "NOAA9",
+                "number_of_observations": 26,
+                "start_time": "2024-07-04T1757",
+                "end_time": "2024-07-04T2324",
+                "central_coordinates": {
+                    "latitude": 21.16923076923077,
+                    "longitude": 86.38461538461539
+                },
+                "max_wind_speed": 65
+            },
+            {
+                "filename": "202421.json",
+                "mission_number": "21",
+                "plane_id": "AF305",
+                "number_of_observations": 28,
+                "start_time": "2024-07-04T2253",
+                "end_time": "2024-07-05T0619",
+                "central_coordinates": {
+                    "latitude": 19.814285714285713,
+                    "longitude": 85.50714285714285
+                },
+                "max_wind_speed": 98
+            },
+            {
+                "filename": "202422.json",
+                "mission_number": "22",
+                "plane_id": "NOAA2",
+                "number_of_observations": 11,
+                "start_time": "2024-07-05T2157",
+                "end_time": "2024-07-06T0100",
+                "central_coordinates": {
+                    "latitude": 21.945454545454545,
+                    "longitude": 89.83636363636364
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202423.json",
+                "mission_number": "23",
+                "plane_id": "AF309",
+                "number_of_observations": 12,
+                "start_time": "2024-07-06T0027",
+                "end_time": "2024-07-06T0513",
+                "central_coordinates": {
+                    "latitude": 21.96666666666667,
+                    "longitude": 90.21666666666667
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202424.json",
+                "mission_number": "24",
+                "plane_id": "NOAA2",
+                "number_of_observations": 18,
+                "start_time": "2024-07-06T1011",
+                "end_time": "2024-07-06T1323",
+                "central_coordinates": {
+                    "latitude": 22.683333333333334,
+                    "longitude": 91.84444444444445
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202425.json",
+                "mission_number": "25",
+                "plane_id": "AF309",
+                "number_of_observations": 12,
+                "start_time": "2024-07-06T1101",
+                "end_time": "2024-07-06T1702",
+                "central_coordinates": {
+                    "latitude": 23.108333333333334,
+                    "longitude": 92.18333333333334
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202426.json",
+                "mission_number": "26",
+                "plane_id": "NOAA2",
+                "number_of_observations": 18,
+                "start_time": "2024-07-06T2154",
+                "end_time": "2024-07-07T0150",
+                "central_coordinates": {
+                    "latitude": 24.333333333333332,
+                    "longitude": 93.46111111111111
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202427.json",
+                "mission_number": "27",
+                "plane_id": "AF301",
+                "number_of_observations": 18,
+                "start_time": "2024-07-06T2308",
+                "end_time": "2024-07-07T0523",
+                "central_coordinates": {
+                    "latitude": 24.77777777777778,
+                    "longitude": 93.96666666666667
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202428.json",
+                "mission_number": "28",
+                "plane_id": "AF306",
+                "number_of_observations": 12,
+                "start_time": "2024-07-07T1119",
+                "end_time": "2024-07-07T1439",
+                "central_coordinates": {
+                    "latitude": 25.883333333333333,
+                    "longitude": 94.875
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202429.json",
+                "mission_number": "29",
+                "plane_id": "AF301",
+                "number_of_observations": 14,
+                "start_time": "2024-07-07T1626",
+                "end_time": "2024-07-07T2308",
+                "central_coordinates": {
+                    "latitude": 26.885714285714286,
+                    "longitude": 95.00714285714285
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202430.json",
+                "mission_number": "30",
+                "plane_id": "NOAA3",
+                "number_of_observations": 15,
+                "start_time": "2024-07-07T2228",
+                "end_time": "2024-07-08T0151",
+                "central_coordinates": {
+                    "latitude": 27.093333333333334,
+                    "longitude": 95.63333333333334
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202431.json",
+                "mission_number": "31",
+                "plane_id": "AF306",
+                "number_of_observations": 18,
+                "start_time": "2024-07-08T0136",
+                "end_time": "2024-07-08T0810",
+                "central_coordinates": {
+                    "latitude": 28.105555555555554,
+                    "longitude": 95.46111111111111
+                },
+                "max_wind_speed": 99
+            }
+        ]
+    },
+    {
+        "storm_name": "Chris",
+        "array_of_missions": [
+            {
+                "filename": "202401.json",
+                "mission_number": "01",
+                "plane_id": "AF308",
+                "number_of_observations": 1,
+                "start_time": "2024-06-30T1507",
+                "end_time": "2024-06-30T1507",
+                "central_coordinates": {
+                    "latitude": 27.2,
+                    "longitude": 91.9
+                },
+                "max_wind_speed": 99
+            },
+            {
+                "filename": "202402.json",
+                "mission_number": "02",
+                "plane_id": "AF302",
+                "number_of_observations": 4,
+                "start_time": "2024-07-01T0039",
+                "end_time": "2024-07-01T0255",
+                "central_coordinates": {
+                    "latitude": 22.35,
+                    "longitude": 94.65
+                },
+                "max_wind_speed": 99
+            }
+        ]
+    }
+]

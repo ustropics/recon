@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storm Recon Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/base.css">
+    <link rel="stylesheet" href="static/styles/layout.css">
+    <link rel="stylesheet" href="static/styles/sidebar.css">
+    <link rel="stylesheet" href="static/styles/legend.css">
+    <link rel="stylesheet" href="static/styles/map.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="header-gradient">
+                    <h2 id="storm-name">Storm Recon</h2>
+                </div>
+                <div class="header-content">
+                    <div class="info-item mission-plane">
+                        <span class="icon material-icons">airplanemode_active</span>
+                        <span id="plane-id">Plane: N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon material-icons">play_arrow</span>
+                        <span id="start-time">Start: N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon material-icons">stop</span>
+                        <span id="end-time">End: N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon material-icons">place</span>
+                        <span id="coordinates">Lat: N/A, Lon: N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon material-icons">visibility</span>
+                        <span id="num-obs">0 obs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <img id="mission-image" src="" alt="Mission Wind Map" style="display: none; width: 100%;">
+                <div class="mission-carousel" id="mission-carousel">
+                    <div class="thumbnail-row" id="mission-thumbnail-row" data-index="0">
+                        <!-- Thumbnails will be populated via JS -->
+                    </div>
+                    <div class="mission-carousel" id="mission-carousel">
+                        <div class="thumbnail-row" id="mission-thumbnail-row" data-index="0">
+                            <!-- Thumbnails will be populated via JS -->
+                        </div>
+                        <div class="carousel-controls" id="mission-carousel-controls">
+                            <button class="carousel-nav-btn" id="prev-btn" disabled><span class="material-icons">arrow_back</span></button>
+                            <div class="pagination-buttons" id="pagination-buttons">
+                                <!-- Pagination buttons will be populated via JS -->
+                            </div>
+                            <button class="carousel-nav-btn" id="next-btn"><span class="material-icons">arrow_forward</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-controls">
+                <p>Storm Tracking Controls</p>
+                <select id="primary-dropdown" class="material-dropdown">
+                    <option value="" disabled selected>Select Storm</option>
+                    <!-- Options will be populated via JS -->
+                </select>
+                <select id="secondary-dropdown" class="material-dropdown" disabled>
+                    <option value="" disabled selected>Select Observation</option>
+                    <!-- Options will be populated based on primary selection -->
+                </select>
+                <button class="material-btn" id="refresh-data">Refresh Map</button>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div class="legend-tab">
+        <div class="legend-toggle" id="legend-toggle">
+            <span class="material-icons">info</span>
+        </div>
+        <div class="legend-content" id="legend-content">
+            <h3>Wind Speed Legend</h3>
+            <div><span style="background: #ed098e"></span> Cat 5 (157.5+ mph)</div>
+            <div><span style="background: #602778"></span> Cat 4 (130-157 mph)</div>
+            <div><span style="background: #f43445"></span> Cat 3 (111-129 mph)</div>
+            <div><span style="background: #ff8a02"></span> Cat 2 (96-110 mph)</div>
+            <div><span style="background: #fad716"></span> Cat 1 (74-95 mph)</div>
+            <div><span style="background: #00ba73"></span> Tropical Storm (39-73 mph)</div>
+            <div><span style="background: #02418b"></span> Below TS (<39 mph)</div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="static/scripts/mapSetup.js"></script>
+    <script src="static/scripts/utils.js"></script>
+    <script src="static/scripts/stormData.js"></script>
+    <script src="static/scripts/ui.js"></script>
+    <script src="static/scripts/popup.js"></script>
+</body>
+</html>

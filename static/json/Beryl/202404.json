@@ -1,0 +1,3212 @@
+[
+    {
+        "basic_info": {
+            "lat": 16.4,
+            "lon": 63.5,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 2,
+            "year": "2024",
+            "month": "06",
+            "day": "30",
+            "time": "2141",
+            "sst_value": 29.57
+        },
+        "levels": [
+            {
+                "pressure": 1013,
+                "height": 1,
+                "temperature": 29.6,
+                "dewpoint": 24.0,
+                "wind_dir": 80,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 1000,
+                "height": 112,
+                "temperature": 28.6,
+                "dewpoint": 23.0,
+                "wind_dir": 75,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 920,
+                "height": 801,
+                "temperature": 24.0,
+                "dewpoint": 18.1,
+                "wind_dir": 90,
+                "wind_spd": 29
+            },
+            {
+                "pressure": 850,
+                "height": 1534,
+                "temperature": 18.8,
+                "dewpoint": 12.7,
+                "wind_dir": 90,
+                "wind_spd": 25
+            },
+            {
+                "pressure": 700,
+                "height": 3184,
+                "temperature": 11.0,
+                "dewpoint": 3.9,
+                "wind_dir": 80,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 500,
+                "height": 3589,
+                "temperature": 6.1,
+                "dewpoint": -1.2,
+                "wind_dir": 45,
+                "wind_spd": 11
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1013,
+                "temperature": 29.6,
+                "dewpoint": 24.0
+            },
+            {
+                "pressure": 955,
+                "temperature": 25.2,
+                "dewpoint": 20.7
+            },
+            {
+                "pressure": 922,
+                "temperature": 23.8,
+                "dewpoint": 17.8
+            },
+            {
+                "pressure": 891,
+                "temperature": 21.2,
+                "dewpoint": 15.5
+            },
+            {
+                "pressure": 850,
+                "temperature": 18.8,
+                "dewpoint": 12.7
+            },
+            {
+                "pressure": 792,
+                "temperature": 19.0,
+                "dewpoint": 11.5
+            },
+            {
+                "pressure": 679,
+                "temperature": 9.2,
+                "dewpoint": 2.4
+            },
+            {
+                "pressure": 608,
+                "temperature": 1.6,
+                "dewpoint": -4.6
+            },
+            {
+                "pressure": 567,
+                "temperature": 0.2,
+                "dewpoint": -6.7
+            },
+            {
+                "pressure": 538,
+                "temperature": 3.1,
+                "dewpoint": -3.2
+            },
+            {
+                "pressure": 517,
+                "temperature": 4.3,
+                "dewpoint": -3.1
+            },
+            {
+                "pressure": 476,
+                "temperature": -7.9,
+                "dewpoint": -15.3
+            },
+            {
+                "pressure": 455,
+                "temperature": -7.3,
+                "dewpoint": -15.100000000000001
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1013,
+                "wind_dir": 80,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 953,
+                "wind_dir": 75,
+                "wind_spd": 24
+            },
+            {
+                "pressure": 916,
+                "wind_dir": 90,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 90,
+                "wind_spd": 25
+            },
+            {
+                "pressure": 616,
+                "wind_dir": 80,
+                "wind_spd": 30
+            },
+            {
+                "pressure": 594,
+                "wind_dir": 85,
+                "wind_spd": 27
+            },
+            {
+                "pressure": 573,
+                "wind_dir": 60,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 520,
+                "wind_dir": 70,
+                "wind_spd": 14
+            },
+            {
+                "pressure": 497,
+                "wind_dir": 40,
+                "wind_spd": 11
+            },
+            {
+                "pressure": 469,
+                "wind_dir": 50,
+                "wind_spd": 10
+            }
+        ],
+        "filename": "recon_06-30-2141-02-1013-31-20.dat",
+        "calculations": {
+            "rho_a": 1.165648857487201,
+            "C_E": 0.0011498461872927876,
+            "es_Ts": 41.41693275431867,
+            "qs": 0.025829926140054346,
+            "ea_Td": 29.832543048181464,
+            "q": 0.01852391952901089,
+            "ea_Ta": 41.488681599789615,
+            "qa": 0.025875376387368827,
+            "W": 0.013960281660121867,
+            "lambda_h": 0.0018408584952513151,
+            "beta": 0.208075,
+            "H_L_int": 251.88194738606,
+            "Q_L": 0.11455542316501864,
+            "H_L_total": 252.16833594397255,
+            "H_S_int": -0.40149004805082356,
+            "Q_S": -3.951206350112376e-06,
+            "H_S_total": -0.458807271696834,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 10.3,
+            "lon": 58.3,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 5,
+            "year": "2024",
+            "month": "06",
+            "day": "30",
+            "time": "2318",
+            "sst_value": 29.23
+        },
+        "levels": [
+            {
+                "pressure": 1008,
+                "height": 1,
+                "temperature": 27.8,
+                "dewpoint": 24.1,
+                "wind_dir": 305,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 1000,
+                "height": 71,
+                "temperature": 27.0,
+                "dewpoint": 23.7,
+                "wind_dir": 310,
+                "wind_spd": 22
+            },
+            {
+                "pressure": 920,
+                "height": 758,
+                "temperature": 22.4,
+                "dewpoint": 20.0,
+                "wind_dir": 300,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 850,
+                "height": 1492,
+                "temperature": 19.2,
+                "dewpoint": 15.3,
+                "wind_dir": 300,
+                "wind_spd": 19
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1008,
+                "temperature": 27.8,
+                "dewpoint": 24.1
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.2,
+                "dewpoint": 15.3
+            },
+            {
+                "pressure": 776,
+                "temperature": 13.8,
+                "dewpoint": 13.3
+            },
+            {
+                "pressure": 702,
+                "temperature": 10.2,
+                "dewpoint": 7.4
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1008,
+                "wind_dir": 305,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 1002,
+                "wind_dir": 310,
+                "wind_spd": 22
+            },
+            {
+                "pressure": 958,
+                "wind_dir": 310,
+                "wind_spd": 22
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 300,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 745,
+                "wind_dir": 340,
+                "wind_spd": 25
+            },
+            {
+                "pressure": 709,
+                "wind_dir": 330,
+                "wind_spd": 25
+            }
+        ],
+        "filename": "recon_06-30-2318-05-1008-25-19.dat",
+        "calculations": {
+            "rho_a": 1.166832812044794,
+            "C_E": 0.0011441417631935422,
+            "es_Ts": 40.61131871901192,
+            "qs": 0.025447305382086432,
+            "ea_Td": 30.012397734351268,
+            "q": 0.018730358565270194,
+            "ea_Ta": 37.37087741463765,
+            "qa": 0.023387964907529417,
+            "W": 0.01166986040283469,
+            "lambda_h": 0.0009322914395062148,
+            "beta": 0.2309350000000001,
+            "H_L_int": 219.12578061165436,
+            "Q_L": 0.03413646434492591,
+            "H_L_total": 219.2111217725167,
+            "H_S_int": 18.12484545186052,
+            "Q_S": 7.97346816526279e-05,
+            "H_S_total": 18.108574566504583,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.1,
+            "lon": 57.3,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 7,
+            "year": "2024",
+            "month": "06",
+            "day": "30",
+            "time": "2343",
+            "sst_value": 29.07
+        },
+        "levels": [
+            {
+                "pressure": 973,
+                "height": 1,
+                "temperature": 26.2,
+                "dewpoint": 26.2,
+                "wind_dir": 240,
+                "wind_spd": 82
+            },
+            {
+                "pressure": 920,
+                "height": 447,
+                "temperature": 23.4,
+                "dewpoint": 23.4,
+                "wind_dir": 250,
+                "wind_spd": 94
+            },
+            {
+                "pressure": 850,
+                "height": 1185,
+                "temperature": 19.4,
+                "dewpoint": 19.4,
+                "wind_dir": 265,
+                "wind_spd": 97
+            },
+            {
+                "pressure": 700,
+                "height": 3848,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 973,
+                "temperature": 26.2,
+                "dewpoint": 26.2
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.4,
+                "dewpoint": 19.4
+            },
+            {
+                "pressure": 787,
+                "temperature": 17.8,
+                "dewpoint": 17.8
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 973,
+                "wind_dir": 240,
+                "wind_spd": 82
+            },
+            {
+                "pressure": 961,
+                "wind_dir": 246,
+                "wind_spd": 101
+            },
+            {
+                "pressure": 947,
+                "wind_dir": 251,
+                "wind_spd": 102
+            },
+            {
+                "pressure": 935,
+                "wind_dir": 250,
+                "wind_spd": 93
+            },
+            {
+                "pressure": 908,
+                "wind_dir": 250,
+                "wind_spd": 93
+            },
+            {
+                "pressure": 893,
+                "wind_dir": 255,
+                "wind_spd": 87
+            },
+            {
+                "pressure": 871,
+                "wind_dir": 255,
+                "wind_spd": 98
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 265,
+                "wind_spd": 97
+            },
+            {
+                "pressure": 815,
+                "wind_dir": 275,
+                "wind_spd": 98
+            },
+            {
+                "pressure": 789,
+                "wind_dir": 305,
+                "wind_spd": 73
+            },
+            {
+                "pressure": 710,
+                "wind_dir": 320,
+                "wind_spd": 79
+            }
+        ],
+        "filename": "recon_06-30-2343-07-973-102-82.dat",
+        "calculations": {
+            "rho_a": 1.1323378555179373,
+            "C_E": 0.0013191883305977655,
+            "es_Ts": 40.236964927413474,
+            "qs": 0.026130342789617636,
+            "ea_Td": 34.015141917853406,
+            "q": 0.022035711575188476,
+            "ea_Ta": 34.015141917853406,
+            "qa": 0.022035711575188476,
+            "W": 0.15804011998660084,
+            "lambda_h": 0.6875439115260117,
+            "beta": 0.25125500000000045,
+            "H_L_int": 645.0464162166527,
+            "Q_L": 0.0,
+            "H_L_total": 645.0464162166527,
+            "H_S_int": 171.54982902286207,
+            "Q_S": 1.598245748242225,
+            "H_S_total": 187.53228650528433,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.2,
+            "lon": 57.2,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 8,
+            "year": "2024",
+            "month": "06",
+            "day": "30",
+            "time": "2344",
+            "sst_value": 29.1
+        },
+        "levels": [
+            {
+                "pressure": 960,
+                "height": 1,
+                "temperature": 27.6,
+                "dewpoint": 25.5,
+                "wind_dir": null,
+                "wind_spd": 8
+            },
+            {
+                "pressure": 920,
+                "height": 326,
+                "temperature": 25.0,
+                "dewpoint": 24.4,
+                "wind_dir": 305,
+                "wind_spd": 9
+            },
+            {
+                "pressure": 850,
+                "height": 1072,
+                "temperature": 25.4,
+                "dewpoint": 19.6,
+                "wind_dir": 315,
+                "wind_spd": 12
+            },
+            {
+                "pressure": 700,
+                "height": 3771,
+                "temperature": 20.8,
+                "dewpoint": 14.5,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 960,
+                "temperature": 27.6,
+                "dewpoint": 25.5
+            },
+            {
+                "pressure": 909,
+                "temperature": 24.0,
+                "dewpoint": 23.3
+            },
+            {
+                "pressure": 897,
+                "temperature": 25.6,
+                "dewpoint": 20.7
+            },
+            {
+                "pressure": 857,
+                "temperature": 25.0,
+                "dewpoint": 19.4
+            },
+            {
+                "pressure": 850,
+                "temperature": 25.4,
+                "dewpoint": 19.6
+            },
+            {
+                "pressure": 829,
+                "temperature": 27.2,
+                "dewpoint": 20.9
+            },
+            {
+                "pressure": 785,
+                "temperature": 25.2,
+                "dewpoint": 18.8
+            },
+            {
+                "pressure": 750,
+                "temperature": 21.2,
+                "dewpoint": 15.3
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 958,
+                "wind_dir": 310,
+                "wind_spd": 8
+            },
+            {
+                "pressure": 951,
+                "wind_dir": 305,
+                "wind_spd": 5
+            },
+            {
+                "pressure": 912,
+                "wind_dir": 305,
+                "wind_spd": 12
+            },
+            {
+                "pressure": 902,
+                "wind_dir": 290,
+                "wind_spd": 10
+            },
+            {
+                "pressure": 889,
+                "wind_dir": 310,
+                "wind_spd": 13
+            },
+            {
+                "pressure": 872,
+                "wind_dir": 310,
+                "wind_spd": 10
+            },
+            {
+                "pressure": 856,
+                "wind_dir": 310,
+                "wind_spd": 15
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 315,
+                "wind_spd": 12
+            },
+            {
+                "pressure": 831,
+                "wind_dir": 330,
+                "wind_spd": 11
+            },
+            {
+                "pressure": 794,
+                "wind_dir": 295,
+                "wind_spd": 10
+            },
+            {
+                "pressure": 767,
+                "wind_dir": 315,
+                "wind_spd": 11
+            },
+            {
+                "pressure": 756,
+                "wind_dir": 20,
+                "wind_spd": 15
+            },
+            {
+                "pressure": 706,
+                "wind_dir": 25,
+                "wind_spd": 20
+            }
+        ],
+        "filename": "recon_06-30-2344-08-960-20-.dat",
+        "calculations": {
+            "rho_a": 1.1120083435376025,
+            "C_E": 0.0010653300566591576,
+            "es_Ts": 40.30692582359047,
+            "qs": 0.026536688886226782,
+            "ea_Td": 32.63192901145041,
+            "q": 0.021417966309751846,
+            "ea_Ta": 36.936185716119006,
+            "qa": 0.024284758706901034,
+            "W": 0.0005656690270494721,
+            "lambda_h": 8.060788715290918e-18,
+            "beta": 0.23347499999999988,
+            "H_L_int": 62.39119433900318,
+            "Q_L": 8.484468082094849e-18,
+            "H_L_total": 62.39119433900318,
+            "H_S_int": 7.196137735417315,
+            "Q_S": 3.5052989794317957e-20,
+            "H_S_total": 7.196137735417315,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.3,
+            "lon": 57.1,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 9,
+            "year": "2024",
+            "month": "06",
+            "day": "30",
+            "time": "2347",
+            "sst_value": 29.14
+        },
+        "levels": [
+            {
+                "pressure": 975,
+                "height": 1,
+                "temperature": 25.8,
+                "dewpoint": 25.8,
+                "wind_dir": 70,
+                "wind_spd": 73
+            },
+            {
+                "pressure": 920,
+                "height": 466,
+                "temperature": 23.0,
+                "dewpoint": 22.7,
+                "wind_dir": 101,
+                "wind_spd": 111
+            },
+            {
+                "pressure": 850,
+                "height": 1206,
+                "temperature": 23.6,
+                "dewpoint": 18.6,
+                "wind_dir": 111,
+                "wind_spd": 104
+            },
+            {
+                "pressure": 700,
+                "height": 3889,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 975,
+                "temperature": 25.8,
+                "dewpoint": 25.8
+            },
+            {
+                "pressure": 878,
+                "temperature": 21.6,
+                "dewpoint": 21.0
+            },
+            {
+                "pressure": 850,
+                "temperature": 23.6,
+                "dewpoint": 18.6
+            },
+            {
+                "pressure": 826,
+                "temperature": 22.2,
+                "dewpoint": 17.2
+            },
+            {
+                "pressure": 795,
+                "temperature": 22.8,
+                "dewpoint": 16.9
+            },
+            {
+                "pressure": 750,
+                "temperature": 19.2,
+                "dewpoint": 13.5
+            },
+            {
+                "pressure": 715,
+                "temperature": 18.0,
+                "dewpoint": 11.9
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 975,
+                "wind_dir": 70,
+                "wind_spd": 73
+            },
+            {
+                "pressure": 974,
+                "wind_dir": 70,
+                "wind_spd": 74
+            },
+            {
+                "pressure": 971,
+                "wind_dir": 66,
+                "wind_spd": 102
+            },
+            {
+                "pressure": 969,
+                "wind_dir": 71,
+                "wind_spd": 109
+            },
+            {
+                "pressure": 965,
+                "wind_dir": 75,
+                "wind_spd": 92
+            },
+            {
+                "pressure": 962,
+                "wind_dir": 75,
+                "wind_spd": 88
+            },
+            {
+                "pressure": 952,
+                "wind_dir": 91,
+                "wind_spd": 110
+            },
+            {
+                "pressure": 935,
+                "wind_dir": 96,
+                "wind_spd": 107
+            },
+            {
+                "pressure": 915,
+                "wind_dir": 101,
+                "wind_spd": 111
+            },
+            {
+                "pressure": 905,
+                "wind_dir": 101,
+                "wind_spd": 104
+            },
+            {
+                "pressure": 879,
+                "wind_dir": 106,
+                "wind_spd": 115
+            },
+            {
+                "pressure": 867,
+                "wind_dir": 106,
+                "wind_spd": 114
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 111,
+                "wind_spd": 104
+            },
+            {
+                "pressure": 738,
+                "wind_dir": 115,
+                "wind_spd": 96
+            },
+            {
+                "pressure": 709,
+                "wind_dir": 121,
+                "wind_spd": 108
+            }
+        ],
+        "filename": "recon_06-30-2347-09-975-115-73.dat",
+        "calculations": {
+            "rho_a": 1.1361835751030016,
+            "C_E": 0.0013062517340503123,
+            "es_Ts": 40.40037225055558,
+            "qs": 0.0261834751902214,
+            "ea_Td": 33.218588150393785,
+            "q": 0.021468236360296242,
+            "ea_Ta": 33.218588150393785,
+            "qa": 0.021468236360296242,
+            "W": 0.16808038696008923,
+            "lambda_h": 0.6233180912894845,
+            "beta": 0.2563350000000004,
+            "H_L_int": 657.024305318898,
+            "Q_L": 0.0,
+            "H_L_total": 657.024305318898,
+            "H_S_int": 176.8599858464229,
+            "Q_S": 1.7933584683667412,
+            "H_S_total": 194.7935705300903,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 12.5,
+            "lon": 56.0,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 10,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0015",
+            "sst_value": 28.61
+        },
+        "levels": [
+            {
+                "pressure": 1011,
+                "height": 1,
+                "temperature": 26.4,
+                "dewpoint": 24.4,
+                "wind_dir": 100,
+                "wind_spd": 29
+            },
+            {
+                "pressure": 1000,
+                "height": 96,
+                "temperature": 25.4,
+                "dewpoint": 24.0,
+                "wind_dir": 100,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 920,
+                "height": 780,
+                "temperature": 21.0,
+                "dewpoint": 20.4,
+                "wind_dir": 135,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 850,
+                "height": 1511,
+                "temperature": 18.4,
+                "dewpoint": 15.4,
+                "wind_dir": 140,
+                "wind_spd": 46
+            },
+            {
+                "pressure": 700,
+                "height": 3152,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1011,
+                "temperature": 26.4,
+                "dewpoint": 24.4
+            },
+            {
+                "pressure": 871,
+                "temperature": 18.2,
+                "dewpoint": 17.7
+            },
+            {
+                "pressure": 850,
+                "temperature": 18.4,
+                "dewpoint": 15.4
+            },
+            {
+                "pressure": 794,
+                "temperature": 14.0,
+                "dewpoint": 13.1
+            },
+            {
+                "pressure": 775,
+                "temperature": 14.0,
+                "dewpoint": 10.2
+            },
+            {
+                "pressure": 706,
+                "temperature": 10.0,
+                "dewpoint": 7.6
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1011,
+                "wind_dir": 100,
+                "wind_spd": 29
+            },
+            {
+                "pressure": 981,
+                "wind_dir": 105,
+                "wind_spd": 36
+            },
+            {
+                "pressure": 944,
+                "wind_dir": 130,
+                "wind_spd": 36
+            },
+            {
+                "pressure": 919,
+                "wind_dir": 130,
+                "wind_spd": 29
+            },
+            {
+                "pressure": 881,
+                "wind_dir": 140,
+                "wind_spd": 42
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 140,
+                "wind_spd": 46
+            },
+            {
+                "pressure": 707,
+                "wind_dir": 135,
+                "wind_spd": 45
+            }
+        ],
+        "filename": "recon_07-01-0015-10-1011-46-29.dat",
+        "calculations": {
+            "rho_a": 1.1757751589934984,
+            "C_E": 0.00119362232751102,
+            "es_Ts": 39.17743246196491,
+            "qs": 0.024461538691576717,
+            "ea_Td": 30.55767110177928,
+            "q": 0.019017346173426403,
+            "ea_Ta": 34.41964660262155,
+            "qa": 0.02145215245122461,
+            "W": 0.05056784103891615,
+            "lambda_h": 0.05002387876745568,
+            "beta": 0.24871500000000069,
+            "H_L_int": 284.9719936216184,
+            "Q_L": 4.50279790765386,
+            "H_L_total": 296.2289883907531,
+            "H_S_int": 44.616019429880936,
+            "Q_S": 0.028650876899367766,
+            "H_S_total": 42.651129245047684,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 12.5,
+            "lon": 59.1,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 13,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0057",
+            "sst_value": 29.32
+        },
+        "levels": [
+            {
+                "pressure": 1010,
+                "height": 1,
+                "temperature": 29.0,
+                "dewpoint": 24.0,
+                "wind_dir": 35,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 1000,
+                "height": 90,
+                "temperature": 28.2,
+                "dewpoint": 23.4,
+                "wind_dir": 40,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 920,
+                "height": 778,
+                "temperature": 22.6,
+                "dewpoint": 19.9,
+                "wind_dir": 50,
+                "wind_spd": 35
+            },
+            {
+                "pressure": 850,
+                "height": 1512,
+                "temperature": 19.6,
+                "dewpoint": 14.8,
+                "wind_dir": 60,
+                "wind_spd": 42
+            },
+            {
+                "pressure": 700,
+                "height": 3162,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1010,
+                "temperature": 29.0,
+                "dewpoint": 24.0
+            },
+            {
+                "pressure": 908,
+                "temperature": 21.0,
+                "dewpoint": 19.1
+            },
+            {
+                "pressure": 875,
+                "temperature": 21.2,
+                "dewpoint": 15.6
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.6,
+                "dewpoint": 14.8
+            },
+            {
+                "pressure": 807,
+                "temperature": 16.4,
+                "dewpoint": 13.4
+            },
+            {
+                "pressure": 779,
+                "temperature": 16.0,
+                "dewpoint": 10.4
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1010,
+                "wind_dir": 35,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 913,
+                "wind_dir": 50,
+                "wind_spd": 33
+            },
+            {
+                "pressure": 892,
+                "wind_dir": 55,
+                "wind_spd": 42
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 60,
+                "wind_spd": 42
+            },
+            {
+                "pressure": 709,
+                "wind_dir": 55,
+                "wind_spd": 40
+            }
+        ],
+        "filename": "recon_07-01-0057-13-1010-42-32.dat",
+        "calculations": {
+            "rho_a": 1.1645046417760332,
+            "C_E": 0.0012057438259063613,
+            "es_Ts": 40.82322635475289,
+            "qs": 0.02553070865571305,
+            "ea_Td": 29.832543048181464,
+            "q": 0.018579562326828686,
+            "ea_Ta": 40.07413509420403,
+            "qa": 0.025055096241959573,
+            "W": 0.07034863345028906,
+            "lambda_h": 0.08543751263033778,
+            "beta": 0.2156950000000002,
+            "H_L_int": 401.6818180160554,
+            "Q_L": 24.439997350386157,
+            "H_L_total": 462.7818113920208,
+            "H_S_int": 7.1196949105232665,
+            "Q_S": 0.00985707610465495,
+            "H_S_total": -5.001733003623262,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.4,
+            "lon": 57.8,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 15,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0125",
+            "sst_value": 29.07
+        },
+        "levels": [
+            {
+                "pressure": 986,
+                "height": 1,
+                "temperature": 26.4,
+                "dewpoint": 23.9,
+                "wind_dir": 325,
+                "wind_spd": 53
+            },
+            {
+                "pressure": 920,
+                "height": 566,
+                "temperature": 22.4,
+                "dewpoint": 22.4,
+                "wind_dir": 360,
+                "wind_spd": 74
+            },
+            {
+                "pressure": 850,
+                "height": 1301,
+                "temperature": 19.0,
+                "dewpoint": 18.1,
+                "wind_dir": 10,
+                "wind_spd": 78
+            },
+            {
+                "pressure": 700,
+                "height": 3950,
+                "temperature": 12.2,
+                "dewpoint": 8.9,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 986,
+                "temperature": 26.4,
+                "dewpoint": 23.9
+            },
+            {
+                "pressure": 949,
+                "temperature": 23.4,
+                "dewpoint": 23.4
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.0,
+                "dewpoint": 18.1
+            },
+            {
+                "pressure": 763,
+                "temperature": 14.6,
+                "dewpoint": 11.1
+            },
+            {
+                "pressure": 718,
+                "temperature": 11.4,
+                "dewpoint": 10.3
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 986,
+                "wind_dir": 325,
+                "wind_spd": 53
+            },
+            {
+                "pressure": 985,
+                "wind_dir": 325,
+                "wind_spd": 55
+            },
+            {
+                "pressure": 982,
+                "wind_dir": 325,
+                "wind_spd": 70
+            },
+            {
+                "pressure": 980,
+                "wind_dir": 325,
+                "wind_spd": 76
+            },
+            {
+                "pressure": 965,
+                "wind_dir": 350,
+                "wind_spd": 81
+            },
+            {
+                "pressure": 945,
+                "wind_dir": 350,
+                "wind_spd": 66
+            },
+            {
+                "pressure": 929,
+                "wind_dir": 360,
+                "wind_spd": 75
+            },
+            {
+                "pressure": 919,
+                "wind_dir": 360,
+                "wind_spd": 70
+            },
+            {
+                "pressure": 880,
+                "wind_dir": 5,
+                "wind_spd": 80
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 10,
+                "wind_spd": 78
+            },
+            {
+                "pressure": 706,
+                "wind_dir": 25,
+                "wind_spd": 81
+            }
+        ],
+        "filename": "recon_07-01-0125-15-986-81-53.dat",
+        "calculations": {
+            "rho_a": 1.1467006001657658,
+            "C_E": 0.0012684297232816119,
+            "es_Ts": 40.236964927413474,
+            "qs": 0.02578042745596041,
+            "ea_Td": 29.653632860353436,
+            "q": 0.018921554491782365,
+            "ea_Ta": 34.41964660262155,
+            "qa": 0.022003344299605262,
+            "W": 0.20542867219950134,
+            "lambda_h": 0.4078875633013779,
+            "beta": 0.24871500000000069,
+            "H_L_int": 680.0245205433085,
+            "Q_L": 184.1181337177335,
+            "H_L_total": 1140.3198548376422,
+            "H_S_int": 101.07154446667118,
+            "Q_S": 1.1465860505802836,
+            "H_S_total": 20.478338113607265,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.3,
+            "lon": 57.7,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 16,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0129",
+            "sst_value": 29.09
+        },
+        "levels": [
+            {
+                "pressure": 962,
+                "height": 1,
+                "temperature": 27.6,
+                "dewpoint": 26.4,
+                "wind_dir": 170,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 920,
+                "height": 352,
+                "temperature": 25.0,
+                "dewpoint": 24.3,
+                "wind_dir": 195,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 850,
+                "height": 1095,
+                "temperature": 21.6,
+                "dewpoint": 21.0,
+                "wind_dir": 225,
+                "wind_spd": 24
+            },
+            {
+                "pressure": 700,
+                "height": 3790,
+                "temperature": 20.6,
+                "dewpoint": 14.3,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 962,
+                "temperature": 27.6,
+                "dewpoint": 26.4
+            },
+            {
+                "pressure": 850,
+                "temperature": 21.6,
+                "dewpoint": 21.0
+            },
+            {
+                "pressure": 837,
+                "temperature": 25.2,
+                "dewpoint": 19.4
+            },
+            {
+                "pressure": 791,
+                "temperature": 22.6,
+                "dewpoint": 16.9
+            },
+            {
+                "pressure": 756,
+                "temperature": 23.2,
+                "dewpoint": 17.0
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 962,
+                "wind_dir": 170,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 944,
+                "wind_dir": 190,
+                "wind_spd": 36
+            },
+            {
+                "pressure": 914,
+                "wind_dir": 195,
+                "wind_spd": 30
+            },
+            {
+                "pressure": 896,
+                "wind_dir": 200,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 870,
+                "wind_dir": 215,
+                "wind_spd": 23
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 225,
+                "wind_spd": 24
+            },
+            {
+                "pressure": 786,
+                "wind_dir": 215,
+                "wind_spd": 25
+            },
+            {
+                "pressure": 757,
+                "wind_dir": 195,
+                "wind_spd": 12
+            },
+            {
+                "pressure": 743,
+                "wind_dir": 225,
+                "wind_spd": 10
+            },
+            {
+                "pressure": 707,
+                "wind_dir": 200,
+                "wind_spd": 2
+            }
+        ],
+        "filename": "recon_07-01-0129-16-962-36-32.dat",
+        "calculations": {
+            "rho_a": 1.1143250275866392,
+            "C_E": 0.0012057438259063613,
+            "es_Ts": 40.283593730971624,
+            "qs": 0.026465056092784187,
+            "ea_Td": 34.41964660262155,
+            "q": 0.022559810238940322,
+            "ea_Ta": 36.936185716119006,
+            "qa": 0.024233527098912928,
+            "W": 0.07034863345028906,
+            "lambda_h": 0.08543751263033778,
+            "beta": 0.23347499999999988,
+            "H_L_int": 215.94581099515636,
+            "Q_L": 6.543024253880674,
+            "H_L_total": 232.30337162985805,
+            "H_S_int": 31.722567838644288,
+            "Q_S": 0.04589701061229912,
+            "H_S_total": 28.91002581782694,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.2,
+            "lon": 57.6,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 17,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0131",
+            "sst_value": 29.07
+        },
+        "levels": [
+            {
+                "pressure": 981,
+                "height": 1,
+                "temperature": 26.2,
+                "dewpoint": 25.7,
+                "wind_dir": 170,
+                "wind_spd": 78
+            },
+            {
+                "pressure": 920,
+                "height": 519,
+                "temperature": 23.2,
+                "dewpoint": 21.7,
+                "wind_dir": 190,
+                "wind_spd": 99
+            },
+            {
+                "pressure": 850,
+                "height": 1257,
+                "temperature": 20.6,
+                "dewpoint": 18.6,
+                "wind_dir": 200,
+                "wind_spd": 90
+            },
+            {
+                "pressure": 700,
+                "height": 3932,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 981,
+                "temperature": 26.2,
+                "dewpoint": 25.7
+            },
+            {
+                "pressure": 943,
+                "temperature": 23.2,
+                "dewpoint": 23.1
+            },
+            {
+                "pressure": 850,
+                "temperature": 20.6,
+                "dewpoint": 18.6
+            },
+            {
+                "pressure": 818,
+                "temperature": 18.2,
+                "dewpoint": 16.2
+            },
+            {
+                "pressure": 735,
+                "temperature": 19.4,
+                "dewpoint": 13.5
+            },
+            {
+                "pressure": 715,
+                "temperature": 20.8,
+                "dewpoint": 14.4
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 981,
+                "wind_dir": 170,
+                "wind_spd": 78
+            },
+            {
+                "pressure": 972,
+                "wind_dir": 180,
+                "wind_spd": 94
+            },
+            {
+                "pressure": 964,
+                "wind_dir": 180,
+                "wind_spd": 96
+            },
+            {
+                "pressure": 955,
+                "wind_dir": 186,
+                "wind_spd": 103
+            },
+            {
+                "pressure": 889,
+                "wind_dir": 195,
+                "wind_spd": 94
+            },
+            {
+                "pressure": 857,
+                "wind_dir": 200,
+                "wind_spd": 95
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 200,
+                "wind_spd": 90
+            },
+            {
+                "pressure": 792,
+                "wind_dir": 205,
+                "wind_spd": 83
+            },
+            {
+                "pressure": 754,
+                "wind_dir": 216,
+                "wind_spd": 102
+            },
+            {
+                "pressure": 712,
+                "wind_dir": 210,
+                "wind_spd": 82
+            }
+        ],
+        "filename": "recon_07-01-0131-17-981-103-78.dat",
+        "calculations": {
+            "rho_a": 1.1416479303834497,
+            "C_E": 0.0013136847004709233,
+            "es_Ts": 40.236964927413474,
+            "qs": 0.02591389547722238,
+            "ea_Td": 33.02201819694892,
+            "q": 0.021207352022264023,
+            "ea_Ta": 34.015141917853406,
+            "qa": 0.021853625019413632,
+            "W": 0.16165667227955305,
+            "lambda_h": 0.6609756050091123,
+            "beta": 0.25125500000000045,
+            "H_L_int": 708.1080069347759,
+            "Q_L": 49.52015454732294,
+            "H_L_total": 831.9083933030832,
+            "H_S_int": 163.9443438545434,
+            "Q_S": 1.5716463636986249,
+            "H_S_total": 154.9007302178682,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 10.3,
+            "lon": 56.6,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 18,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0157",
+            "sst_value": 29.22
+        },
+        "levels": [
+            {
+                "pressure": 1011,
+                "height": 1,
+                "temperature": 27.4,
+                "dewpoint": 24.4,
+                "wind_dir": null,
+                "wind_spd": 21
+            },
+            {
+                "pressure": 1000,
+                "height": 101,
+                "temperature": 26.6,
+                "dewpoint": 24.5,
+                "wind_dir": 175,
+                "wind_spd": 21
+            },
+            {
+                "pressure": 920,
+                "height": 787,
+                "temperature": 22.6,
+                "dewpoint": 17.6,
+                "wind_dir": 190,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 850,
+                "height": 1519,
+                "temperature": 19.0,
+                "dewpoint": 13.3,
+                "wind_dir": 180,
+                "wind_spd": 37
+            },
+            {
+                "pressure": 700,
+                "height": 3162,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1011,
+                "temperature": 27.4,
+                "dewpoint": 24.4
+            },
+            {
+                "pressure": 951,
+                "temperature": 22.8,
+                "dewpoint": 22.0
+            },
+            {
+                "pressure": 927,
+                "temperature": 22.6,
+                "dewpoint": 17.6
+            },
+            {
+                "pressure": 904,
+                "temperature": 21.4,
+                "dewpoint": 15.7
+            },
+            {
+                "pressure": 887,
+                "temperature": 20.4,
+                "dewpoint": 16.3
+            },
+            {
+                "pressure": 871,
+                "temperature": 20.2,
+                "dewpoint": 14.3
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.0,
+                "dewpoint": 13.3
+            },
+            {
+                "pressure": 760,
+                "temperature": 13.2,
+                "dewpoint": 10.4
+            },
+            {
+                "pressure": 708,
+                "temperature": 9.6,
+                "dewpoint": 5.6
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1010,
+                "wind_dir": 170,
+                "wind_spd": 21
+            },
+            {
+                "pressure": 992,
+                "wind_dir": 175,
+                "wind_spd": 22
+            },
+            {
+                "pressure": 972,
+                "wind_dir": 170,
+                "wind_spd": 29
+            },
+            {
+                "pressure": 914,
+                "wind_dir": 190,
+                "wind_spd": 32
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 180,
+                "wind_spd": 37
+            },
+            {
+                "pressure": 708,
+                "wind_dir": 195,
+                "wind_spd": 34
+            }
+        ],
+        "filename": "recon_07-01-0157-18-1011-37-.dat",
+        "calculations": {
+            "rho_a": 1.171863080607228,
+            "C_E": 0.0011553600726825748,
+            "es_Ts": 40.58783282493416,
+            "qs": 0.02535573169576138,
+            "ea_Td": 30.55767110177928,
+            "q": 0.019017346173426403,
+            "ea_Ta": 36.50591960461597,
+            "qa": 0.02277042181522428,
+            "W": 0.01655270647215298,
+            "lambda_h": 0.0033059241520060462,
+            "beta": 0.23601500000000053,
+            "H_L_int": 231.77770948093445,
+            "Q_L": 0.14200567579982995,
+            "H_L_total": 232.13272367043402,
+            "H_S_int": 25.812896893153038,
+            "Q_S": 0.0005104193813813896,
+            "H_S_total": 25.746998249066937,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 12.6,
+            "lon": 56.9,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 21,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0230",
+            "sst_value": 29.11
+        },
+        "levels": [
+            {
+                "pressure": 1012,
+                "height": 1,
+                "temperature": 27.2,
+                "dewpoint": 23.8,
+                "wind_dir": 105,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 1000,
+                "height": 103,
+                "temperature": 26.4,
+                "dewpoint": 22.4,
+                "wind_dir": 105,
+                "wind_spd": 37
+            },
+            {
+                "pressure": 920,
+                "height": 788,
+                "temperature": 22.0,
+                "dewpoint": 18.7,
+                "wind_dir": 125,
+                "wind_spd": 41
+            },
+            {
+                "pressure": 850,
+                "height": 1519,
+                "temperature": 16.8,
+                "dewpoint": 15.3,
+                "wind_dir": 125,
+                "wind_spd": 43
+            },
+            {
+                "pressure": 700,
+                "height": 3156,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1012,
+                "temperature": 27.2,
+                "dewpoint": 23.8
+            },
+            {
+                "pressure": 899,
+                "temperature": 19.6,
+                "dewpoint": 18.2
+            },
+            {
+                "pressure": 885,
+                "temperature": 20.0,
+                "dewpoint": 15.8
+            },
+            {
+                "pressure": 850,
+                "temperature": 16.8,
+                "dewpoint": 15.3
+            },
+            {
+                "pressure": 836,
+                "temperature": 16.2,
+                "dewpoint": 15.6
+            },
+            {
+                "pressure": 822,
+                "temperature": 16.4,
+                "dewpoint": 11.4
+            },
+            {
+                "pressure": 751,
+                "temperature": 10.8,
+                "dewpoint": 10.0
+            },
+            {
+                "pressure": 724,
+                "temperature": 11.0,
+                "dewpoint": 6.0
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1012,
+                "wind_dir": 105,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 999,
+                "wind_dir": 105,
+                "wind_spd": 37
+            },
+            {
+                "pressure": 971,
+                "wind_dir": 110,
+                "wind_spd": 41
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 125,
+                "wind_spd": 43
+            },
+            {
+                "pressure": 747,
+                "wind_dir": 135,
+                "wind_spd": 45
+            },
+            {
+                "pressure": 707,
+                "wind_dir": 125,
+                "wind_spd": 52
+            }
+        ],
+        "filename": "recon_07-01-0230-21-1012-52-31.dat",
+        "calculations": {
+            "rho_a": 1.173803296954807,
+            "C_E": 0.001201818972820736,
+            "es_Ts": 40.33026971681824,
+            "qs": 0.025167090996560483,
+            "ea_Td": 29.4756629616612,
+            "q": 0.018318141743890532,
+            "ea_Ta": 36.08004092496793,
+            "qa": 0.02247861116301773,
+            "W": 0.06331369257317664,
+            "lambda_h": 0.07271282050004349,
+            "beta": 0.23855500000000074,
+            "H_L_int": 385.2117421421763,
+            "Q_L": 13.40833418484465,
+            "H_L_total": 418.73257760428794,
+            "H_S_int": 41.384151340898455,
+            "Q_S": 0.04506463638194345,
+            "H_S_total": 35.13063061229557,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.5,
+            "lon": 57.9,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 23,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0256",
+            "sst_value": 29.11
+        },
+        "levels": [
+            {
+                "pressure": 985,
+                "height": 1,
+                "temperature": 26.8,
+                "dewpoint": 24.7,
+                "wind_dir": 120,
+                "wind_spd": 64
+            },
+            {
+                "pressure": 920,
+                "height": 553,
+                "temperature": 23.2,
+                "dewpoint": 21.3,
+                "wind_dir": 140,
+                "wind_spd": 94
+            },
+            {
+                "pressure": 850,
+                "height": 1292,
+                "temperature": 20.8,
+                "dewpoint": 16.8,
+                "wind_dir": 145,
+                "wind_spd": 92
+            },
+            {
+                "pressure": 700,
+                "height": 3959,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 985,
+                "temperature": 26.8,
+                "dewpoint": 24.7
+            },
+            {
+                "pressure": 952,
+                "temperature": 24.2,
+                "dewpoint": 23.0
+            },
+            {
+                "pressure": 850,
+                "temperature": 20.8,
+                "dewpoint": 16.8
+            },
+            {
+                "pressure": 702,
+                "temperature": 15.6,
+                "dewpoint": 10.0
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 985,
+                "wind_dir": 120,
+                "wind_spd": 64
+            },
+            {
+                "pressure": 984,
+                "wind_dir": 120,
+                "wind_spd": 64
+            },
+            {
+                "pressure": 982,
+                "wind_dir": 125,
+                "wind_spd": 81
+            },
+            {
+                "pressure": 978,
+                "wind_dir": 130,
+                "wind_spd": 92
+            },
+            {
+                "pressure": 963,
+                "wind_dir": 140,
+                "wind_spd": 99
+            },
+            {
+                "pressure": 936,
+                "wind_dir": 145,
+                "wind_spd": 93
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 145,
+                "wind_spd": 92
+            },
+            {
+                "pressure": 710,
+                "wind_dir": 150,
+                "wind_spd": 85
+            }
+        ],
+        "filename": "recon_07-01-0256-23-985-99-64.dat",
+        "calculations": {
+            "rho_a": 1.14400997971589,
+            "C_E": 0.0012910516656816696,
+            "es_Ts": 40.33026971681824,
+            "qs": 0.025867795139527434,
+            "ea_Td": 31.111597940190627,
+            "q": 0.019883500038826933,
+            "ea_Ta": 35.24129455471153,
+            "qa": 0.022558982889993473,
+            "W": 0.18572553709959472,
+            "lambda_h": 0.5406449478785497,
+            "beta": 0.24363500000000027,
+            "H_L_int": 727.5216215345503,
+            "Q_L": 187.19551678491547,
+            "H_L_total": 1195.510413496839,
+            "H_S_int": 106.91953535907285,
+            "Q_S": 1.1887475137004695,
+            "H_S_total": 25.209252103619818,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.4,
+            "lon": 58.2,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 24,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0300",
+            "sst_value": 29.07
+        },
+        "levels": [
+            {
+                "pressure": 965,
+                "height": 1,
+                "temperature": 27.4,
+                "dewpoint": 25.7,
+                "wind_dir": 165,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 920,
+                "height": 373,
+                "temperature": 25.2,
+                "dewpoint": 24.1,
+                "wind_dir": 180,
+                "wind_spd": 18
+            },
+            {
+                "pressure": 850,
+                "height": 1117,
+                "temperature": 22.4,
+                "dewpoint": 20.4,
+                "wind_dir": 205,
+                "wind_spd": 12
+            },
+            {
+                "pressure": 700,
+                "height": 3799,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 965,
+                "temperature": 27.4,
+                "dewpoint": 25.7
+            },
+            {
+                "pressure": 850,
+                "temperature": 22.4,
+                "dewpoint": 20.4
+            },
+            {
+                "pressure": 775,
+                "temperature": 19.2,
+                "dewpoint": 16.1
+            },
+            {
+                "pressure": 759,
+                "temperature": 20.6,
+                "dewpoint": 14.8
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 965,
+                "wind_dir": 165,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 205,
+                "wind_spd": 12
+            },
+            {
+                "pressure": 709,
+                "wind_dir": 255,
+                "wind_spd": 6
+            }
+        ],
+        "filename": "recon_07-01-0300-24-965-19-19.dat",
+        "calculations": {
+            "rho_a": 1.118543889996019,
+            "C_E": 0.0011441417631935422,
+            "es_Ts": 40.236964927413474,
+            "qs": 0.026350436334801663,
+            "ea_Td": 33.02201819694892,
+            "q": 0.02156358439517034,
+            "ea_Ta": 36.50591960461597,
+            "qa": 0.023871597765576867,
+            "W": 0.01166986040283469,
+            "lambda_h": 0.0009322914395062148,
+            "beta": 0.23601500000000053,
+            "H_L_int": 149.69798611872307,
+            "Q_L": 0.01657251122525974,
+            "H_L_total": 149.73941739678622,
+            "H_S_int": 20.290798700036856,
+            "Q_S": 9.311672612579666e-05,
+            "H_S_total": 20.28344361168548,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.2,
+            "lon": 58.4,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 25,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0305",
+            "sst_value": 29.09
+        },
+        "levels": [
+            {
+                "pressure": 994,
+                "height": 1,
+                "temperature": 26.2,
+                "dewpoint": 24.4,
+                "wind_dir": 265,
+                "wind_spd": 49
+            },
+            {
+                "pressure": 920,
+                "height": 630,
+                "temperature": 22.0,
+                "dewpoint": 21.2,
+                "wind_dir": 285,
+                "wind_spd": 71
+            },
+            {
+                "pressure": 850,
+                "height": 1363,
+                "temperature": 18.6,
+                "dewpoint": 17.8,
+                "wind_dir": 315,
+                "wind_spd": 63
+            },
+            {
+                "pressure": 700,
+                "height": 3017,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 994,
+                "temperature": 26.2,
+                "dewpoint": 24.4
+            },
+            {
+                "pressure": 850,
+                "temperature": 18.6,
+                "dewpoint": 17.8
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 994,
+                "wind_dir": 265,
+                "wind_spd": 49
+            },
+            {
+                "pressure": 984,
+                "wind_dir": 270,
+                "wind_spd": 64
+            },
+            {
+                "pressure": 976,
+                "wind_dir": 275,
+                "wind_spd": 61
+            },
+            {
+                "pressure": 962,
+                "wind_dir": 275,
+                "wind_spd": 62
+            },
+            {
+                "pressure": 948,
+                "wind_dir": 275,
+                "wind_spd": 69
+            },
+            {
+                "pressure": 938,
+                "wind_dir": 280,
+                "wind_spd": 67
+            },
+            {
+                "pressure": 929,
+                "wind_dir": 285,
+                "wind_spd": 71
+            },
+            {
+                "pressure": 911,
+                "wind_dir": 290,
+                "wind_spd": 71
+            },
+            {
+                "pressure": 897,
+                "wind_dir": 290,
+                "wind_spd": 63
+            },
+            {
+                "pressure": 888,
+                "wind_dir": 295,
+                "wind_spd": 71
+            },
+            {
+                "pressure": 878,
+                "wind_dir": 305,
+                "wind_spd": 64
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 315,
+                "wind_spd": 63
+            },
+            {
+                "pressure": 709,
+                "wind_dir": 320,
+                "wind_spd": 57
+            }
+        ],
+        "filename": "recon_07-01-0305-25-994-71-49.dat",
+        "calculations": {
+            "rho_a": 1.1567768020399072,
+            "C_E": 0.0012587994100832075,
+            "es_Ts": 40.283593730971624,
+            "qs": 0.025599807494119695,
+            "ea_Td": 30.55767110177928,
+            "q": 0.01934641650585864,
+            "ea_Ta": 34.015141917853406,
+            "qa": 0.021564067498451637,
+            "W": 0.19897253079052898,
+            "lambda_h": 0.35023530119603385,
+            "beta": 0.25125500000000045,
+            "H_L_int": 573.8485106923908,
+            "Q_L": 112.29244374898488,
+            "H_L_total": 854.5796200648531,
+            "H_S_int": 101.38247188637337,
+            "Q_S": 1.0321546039649598,
+            "H_S_total": 55.55779605153053,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 10.3,
+            "lon": 59.3,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 27,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0328",
+            "sst_value": 29.09
+        },
+        "levels": [
+            {
+                "pressure": 1008,
+                "height": 1,
+                "temperature": 28.8,
+                "dewpoint": 25.0,
+                "wind_dir": 290,
+                "wind_spd": 11
+            },
+            {
+                "pressure": 1000,
+                "height": 75,
+                "temperature": 28.0,
+                "dewpoint": 23.7,
+                "wind_dir": 290,
+                "wind_spd": 13
+            },
+            {
+                "pressure": 920,
+                "height": 763,
+                "temperature": 22.4,
+                "dewpoint": 20.4,
+                "wind_dir": 300,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 850,
+                "height": 1497,
+                "temperature": 19.6,
+                "dewpoint": 14.6,
+                "wind_dir": 295,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 700,
+                "height": 3142,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1008,
+                "temperature": 28.8,
+                "dewpoint": 25.0
+            },
+            {
+                "pressure": 953,
+                "temperature": 24.0,
+                "dewpoint": 22.8
+            },
+            {
+                "pressure": 901,
+                "temperature": 21.0,
+                "dewpoint": 18.5
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.6,
+                "dewpoint": 14.6
+            },
+            {
+                "pressure": 844,
+                "temperature": 19.6,
+                "dewpoint": 13.8
+            },
+            {
+                "pressure": 782,
+                "temperature": 14.4,
+                "dewpoint": 12.3
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1008,
+                "wind_dir": 290,
+                "wind_spd": 11
+            },
+            {
+                "pressure": 992,
+                "wind_dir": 290,
+                "wind_spd": 16
+            },
+            {
+                "pressure": 971,
+                "wind_dir": 295,
+                "wind_spd": 13
+            },
+            {
+                "pressure": 931,
+                "wind_dir": 300,
+                "wind_spd": 20
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 295,
+                "wind_spd": 19
+            },
+            {
+                "pressure": 822,
+                "wind_dir": 285,
+                "wind_spd": 18
+            },
+            {
+                "pressure": 779,
+                "wind_dir": 300,
+                "wind_spd": 15
+            },
+            {
+                "pressure": 753,
+                "wind_dir": 325,
+                "wind_spd": 18
+            },
+            {
+                "pressure": 708,
+                "wind_dir": 325,
+                "wind_spd": 20
+            }
+        ],
+        "filename": "recon_07-01-0328-27-1008-20-11.dat",
+        "calculations": {
+            "rho_a": 1.1629684874478579,
+            "C_E": 0.0010902717094921888,
+            "es_Ts": 40.283593730971624,
+            "qs": 0.025238801124534423,
+            "ea_Td": 31.67429436187285,
+            "q": 0.019779994703097565,
+            "ea_Ta": 39.612073720657804,
+            "qa": 0.024811731083248124,
+            "W": 0.0017243112383261287,
+            "lambda_h": 9.093794669747936e-10,
+            "beta": 0.2182350000000004,
+            "H_L_int": 97.92026112398472,
+            "Q_L": 5.006232796604002e-09,
+            "H_L_total": 97.9202611365003,
+            "H_S_int": 2.0387207818834168,
+            "Q_S": 2.330519120232594e-12,
+            "H_S_total": 2.0387207794036057,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 10.4,
+            "lon": 57.4,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 29,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0400",
+            "sst_value": 29.26
+        },
+        "levels": [
+            {
+                "pressure": 1009,
+                "height": 1,
+                "temperature": 26.8,
+                "dewpoint": 23.6,
+                "wind_dir": 190,
+                "wind_spd": 21
+            },
+            {
+                "pressure": 1000,
+                "height": 75,
+                "temperature": 26.6,
+                "dewpoint": 23.2,
+                "wind_dir": 190,
+                "wind_spd": 26
+            },
+            {
+                "pressure": 920,
+                "height": 761,
+                "temperature": 22.0,
+                "dewpoint": 20.3,
+                "wind_dir": 190,
+                "wind_spd": 31
+            },
+            {
+                "pressure": 850,
+                "height": 1494,
+                "temperature": 18.4,
+                "dewpoint": 15.1,
+                "wind_dir": 180,
+                "wind_spd": 34
+            },
+            {
+                "pressure": 700,
+                "height": 3136,
+                "temperature": 9.8,
+                "dewpoint": 6.4,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1009,
+                "temperature": 26.8,
+                "dewpoint": 23.6
+            },
+            {
+                "pressure": 921,
+                "temperature": 22.0,
+                "dewpoint": 20.4
+            },
+            {
+                "pressure": 905,
+                "temperature": 21.8,
+                "dewpoint": 16.8
+            },
+            {
+                "pressure": 850,
+                "temperature": 18.4,
+                "dewpoint": 15.1
+            },
+            {
+                "pressure": 802,
+                "temperature": 14.8,
+                "dewpoint": 13.3
+            },
+            {
+                "pressure": 787,
+                "temperature": 15.2,
+                "dewpoint": 10.7
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1009,
+                "wind_dir": 190,
+                "wind_spd": 21
+            },
+            {
+                "pressure": 977,
+                "wind_dir": 195,
+                "wind_spd": 29
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 180,
+                "wind_spd": 34
+            },
+            {
+                "pressure": 707,
+                "wind_dir": 200,
+                "wind_spd": 35
+            }
+        ],
+        "filename": "recon_07-01-0400-29-1009-35-21.dat",
+        "calculations": {
+            "rho_a": 1.171884334551607,
+            "C_E": 0.0011553600726825748,
+            "es_Ts": 40.68184761900051,
+            "qs": 0.025466528073023867,
+            "ea_Td": 29.12252727015331,
+            "q": 0.01815066421883856,
+            "ea_Ta": 35.24129455471153,
+            "qa": 0.022015217576882934,
+            "W": 0.01655270647215298,
+            "lambda_h": 0.0033059241520060462,
+            "beta": 0.24363500000000027,
+            "H_L_int": 267.52631484857176,
+            "Q_L": 0.15094740200181966,
+            "H_L_total": 267.9036833535763,
+            "H_S_int": 34.890592332035546,
+            "Q_S": 0.0006899075154935019,
+            "H_S_total": 34.82201770618957,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.5,
+            "lon": 58.6,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 31,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0432",
+            "sst_value": 29.08
+        },
+        "levels": [
+            {
+                "pressure": 970,
+                "height": 1,
+                "temperature": 27.2,
+                "dewpoint": 25.6,
+                "wind_dir": 150,
+                "wind_spd": 44
+            },
+            {
+                "pressure": 920,
+                "height": 424,
+                "temperature": 25.8,
+                "dewpoint": 22.5,
+                "wind_dir": 175,
+                "wind_spd": 62
+            },
+            {
+                "pressure": 850,
+                "height": 1168,
+                "temperature": 23.4,
+                "dewpoint": 18.7,
+                "wind_dir": 175,
+                "wind_spd": 56
+            },
+            {
+                "pressure": 700,
+                "height": 3848,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 970,
+                "temperature": 27.2,
+                "dewpoint": 25.6
+            },
+            {
+                "pressure": 940,
+                "temperature": 25.0,
+                "dewpoint": 24.0
+            },
+            {
+                "pressure": 928,
+                "temperature": 26.0,
+                "dewpoint": 22.6
+            },
+            {
+                "pressure": 850,
+                "temperature": 23.4,
+                "dewpoint": 18.7
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 970,
+                "wind_dir": 150,
+                "wind_spd": 44
+            },
+            {
+                "pressure": 968,
+                "wind_dir": 155,
+                "wind_spd": 46
+            },
+            {
+                "pressure": 963,
+                "wind_dir": 155,
+                "wind_spd": 59
+            },
+            {
+                "pressure": 959,
+                "wind_dir": 160,
+                "wind_spd": 66
+            },
+            {
+                "pressure": 951,
+                "wind_dir": 170,
+                "wind_spd": 64
+            },
+            {
+                "pressure": 943,
+                "wind_dir": 170,
+                "wind_spd": 70
+            },
+            {
+                "pressure": 928,
+                "wind_dir": 175,
+                "wind_spd": 62
+            },
+            {
+                "pressure": 872,
+                "wind_dir": 175,
+                "wind_spd": 62
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 175,
+                "wind_spd": 56
+            },
+            {
+                "pressure": 711,
+                "wind_dir": 185,
+                "wind_spd": 58
+            }
+        ],
+        "filename": "recon_07-01-0432-31-970-70-44.dat",
+        "calculations": {
+            "rho_a": 1.125088140361821,
+            "C_E": 0.0012454542646434226,
+            "es_Ts": 40.260273433924574,
+            "qs": 0.026227872048872176,
+            "ea_Td": 32.82646664105868,
+            "q": 0.02132230728042127,
+            "ea_Ta": 36.08004092496793,
+            "qa": 0.023465791666886966,
+            "W": 0.1715697041286549,
+            "lambda_h": 0.272220966447501,
+            "beta": 0.23855500000000074,
+            "H_L_int": 388.9873833621411,
+            "Q_L": 67.1734381210712,
+            "H_L_total": 556.9209786648191,
+            "H_S_int": 57.08804869789046,
+            "Q_S": 0.45000142891522116,
+            "H_S_total": 28.00134392650707,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.5,
+            "lon": 58.7,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 32,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0434",
+            "sst_value": 29.08
+        },
+        "levels": [
+            {
+                "pressure": 967,
+                "height": 1,
+                "temperature": 27.8,
+                "dewpoint": 26.3,
+                "wind_dir": 245,
+                "wind_spd": 18
+            },
+            {
+                "pressure": 920,
+                "height": 393,
+                "temperature": 25.4,
+                "dewpoint": 24.4,
+                "wind_dir": 255,
+                "wind_spd": 23
+            },
+            {
+                "pressure": 850,
+                "height": 1136,
+                "temperature": 22.0,
+                "dewpoint": 20.5,
+                "wind_dir": 285,
+                "wind_spd": 24
+            },
+            {
+                "pressure": 700,
+                "height": 3808,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 967,
+                "temperature": 27.8,
+                "dewpoint": 26.3
+            },
+            {
+                "pressure": 850,
+                "temperature": 22.0,
+                "dewpoint": 20.5
+            },
+            {
+                "pressure": 742,
+                "temperature": 16.2,
+                "dewpoint": 15.3
+            },
+            {
+                "pressure": 713,
+                "temperature": 15.4,
+                "dewpoint": 14.6
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 967,
+                "wind_dir": 245,
+                "wind_spd": 18
+            },
+            {
+                "pressure": 945,
+                "wind_dir": 255,
+                "wind_spd": 24
+            },
+            {
+                "pressure": 936,
+                "wind_dir": 250,
+                "wind_spd": 21
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 285,
+                "wind_spd": 24
+            },
+            {
+                "pressure": 707,
+                "wind_dir": 325,
+                "wind_spd": 24
+            }
+        ],
+        "filename": "recon_07-01-0434-32-967-24-18.dat",
+        "calculations": {
+            "rho_a": 1.1193723504437656,
+            "C_E": 0.0011382367503094408,
+            "es_Ts": 40.260273433924574,
+            "qs": 0.026310541870153473,
+            "ea_Td": 34.21687148139552,
+            "q": 0.02230756945297534,
+            "ea_Ta": 37.37087741463765,
+            "qa": 0.02439429602170073,
+            "W": 0.009660129602756817,
+            "lambda_h": 0.00042022509378158984,
+            "beta": 0.2309350000000001,
+            "H_L_int": 118.07060142301276,
+            "Q_L": 0.005474378533161553,
+            "H_L_total": 118.08428736934566,
+            "H_S_int": 14.681926349666444,
+            "Q_S": 2.6629853375790255e-05,
+            "H_S_total": 14.67945545893362,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 11.7,
+            "lon": 58.9,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 33,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0441",
+            "sst_value": 29.07
+        },
+        "levels": [
+            {
+                "pressure": 992,
+                "height": 1,
+                "temperature": 26.2,
+                "dewpoint": 24.6,
+                "wind_dir": 350,
+                "wind_spd": 56
+            },
+            {
+                "pressure": 920,
+                "height": 612,
+                "temperature": 21.8,
+                "dewpoint": 21.4,
+                "wind_dir": 20,
+                "wind_spd": 75
+            },
+            {
+                "pressure": 850,
+                "height": 1346,
+                "temperature": 18.6,
+                "dewpoint": 18.4,
+                "wind_dir": 35,
+                "wind_spd": 86
+            },
+            {
+                "pressure": 700,
+                "height": 3998,
+                "temperature": null,
+                "dewpoint": null,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 992,
+                "temperature": 26.2,
+                "dewpoint": 24.6
+            },
+            {
+                "pressure": 945,
+                "temperature": 22.6,
+                "dewpoint": 22.2
+            },
+            {
+                "pressure": 850,
+                "temperature": 18.6,
+                "dewpoint": 18.4
+            },
+            {
+                "pressure": 753,
+                "temperature": 14.2,
+                "dewpoint": 12.1
+            },
+            {
+                "pressure": 706,
+                "temperature": 11.4,
+                "dewpoint": 11.2
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 992,
+                "wind_dir": 350,
+                "wind_spd": 56
+            },
+            {
+                "pressure": 990,
+                "wind_dir": 350,
+                "wind_spd": 57
+            },
+            {
+                "pressure": 984,
+                "wind_dir": 355,
+                "wind_spd": 75
+            },
+            {
+                "pressure": 977,
+                "wind_dir": 5,
+                "wind_spd": 73
+            },
+            {
+                "pressure": 966,
+                "wind_dir": 10,
+                "wind_spd": 86
+            },
+            {
+                "pressure": 945,
+                "wind_dir": 10,
+                "wind_spd": 78
+            },
+            {
+                "pressure": 935,
+                "wind_dir": 15,
+                "wind_spd": 83
+            },
+            {
+                "pressure": 926,
+                "wind_dir": 20,
+                "wind_spd": 74
+            },
+            {
+                "pressure": 917,
+                "wind_dir": 25,
+                "wind_spd": 84
+            },
+            {
+                "pressure": 895,
+                "wind_dir": 30,
+                "wind_spd": 82
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 35,
+                "wind_spd": 86
+            },
+            {
+                "pressure": 706,
+                "wind_dir": 45,
+                "wind_spd": 85
+            }
+        ],
+        "filename": "recon_07-01-0441-33-992-86-56.dat",
+        "calculations": {
+            "rho_a": 1.1544492833235291,
+            "C_E": 0.0012751195655839995,
+            "es_Ts": 40.236964927413474,
+            "qs": 0.02562206947003085,
+            "ea_Td": 30.925987022055548,
+            "q": 0.019622328019588912,
+            "ea_Ta": 34.015141917853406,
+            "qa": 0.021608114350516336,
+            "W": 0.20313119431272794,
+            "lambda_h": 0.4478685451424717,
+            "beta": 0.25125500000000045,
+            "H_L_int": 636.1006284270478,
+            "Q_L": 131.00542520061305,
+            "H_L_total": 963.6141914285804,
+            "H_S_int": 116.07855772809424,
+            "Q_S": 1.3381443059415583,
+            "H_S_total": 63.95728818720329,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    },
+    {
+        "basic_info": {
+            "lat": 12.7,
+            "lon": 59.9,
+            "plane_id": "AF306",
+            "mission_id": "04",
+            "storm_id": "02A",
+            "storm_name": "BERYL",
+            "observation_id": 35,
+            "year": "2024",
+            "month": "07",
+            "day": "01",
+            "time": "0502",
+            "sst_value": 29.42
+        },
+        "levels": [
+            {
+                "pressure": 1007,
+                "height": 1,
+                "temperature": 29.0,
+                "dewpoint": 24.0,
+                "wind_dir": 55,
+                "wind_spd": 30
+            },
+            {
+                "pressure": 1000,
+                "height": 63,
+                "temperature": 28.6,
+                "dewpoint": 23.6,
+                "wind_dir": 50,
+                "wind_spd": 36
+            },
+            {
+                "pressure": 920,
+                "height": 751,
+                "temperature": 22.6,
+                "dewpoint": 20.3,
+                "wind_dir": 65,
+                "wind_spd": 41
+            },
+            {
+                "pressure": 850,
+                "height": 1484,
+                "temperature": 19.6,
+                "dewpoint": 14.9,
+                "wind_dir": 70,
+                "wind_spd": 41
+            },
+            {
+                "pressure": 700,
+                "height": 3135,
+                "temperature": 12.0,
+                "dewpoint": 6.4,
+                "wind_dir": null,
+                "wind_spd": 99
+            }
+        ],
+        "temp_levels": [
+            {
+                "pressure": 1007,
+                "temperature": 29.0,
+                "dewpoint": 24.0
+            },
+            {
+                "pressure": 894,
+                "temperature": 20.0,
+                "dewpoint": 19.3
+            },
+            {
+                "pressure": 850,
+                "temperature": 19.6,
+                "dewpoint": 14.9
+            },
+            {
+                "pressure": 799,
+                "temperature": 16.0,
+                "dewpoint": 13.6
+            },
+            {
+                "pressure": 773,
+                "temperature": 15.6,
+                "dewpoint": 9.9
+            }
+        ],
+        "wind_levels": [
+            {
+                "pressure": 1007,
+                "wind_dir": 55,
+                "wind_spd": 30
+            },
+            {
+                "pressure": 992,
+                "wind_dir": 55,
+                "wind_spd": 39
+            },
+            {
+                "pressure": 930,
+                "wind_dir": 60,
+                "wind_spd": 39
+            },
+            {
+                "pressure": 863,
+                "wind_dir": 70,
+                "wind_spd": 47
+            },
+            {
+                "pressure": 850,
+                "wind_dir": 70,
+                "wind_spd": 41
+            },
+            {
+                "pressure": 707,
+                "wind_dir": 60,
+                "wind_spd": 46
+            }
+        ],
+        "filename": "recon_07-01-0502-35-1007-47-30.dat",
+        "calculations": {
+            "rho_a": 1.1610457170974906,
+            "C_E": 0.001197780152388032,
+            "es_Ts": 41.05981107259443,
+            "qs": 0.025758682135305456,
+            "ea_Td": 29.832543048181464,
+            "q": 0.01863554041537166,
+            "ea_Ta": 40.07413509420403,
+            "qa": 0.025130879010430932,
+            "W": 0.056717618141081436,
+            "lambda_h": 0.06087703804488986,
+            "beta": 0.2156950000000002,
+            "H_L_int": 382.20711450798774,
+            "Q_L": 14.041150707618065,
+            "H_L_total": 417.3099912770329,
+            "H_S_int": 8.68659347670899,
+            "Q_S": 0.007432153285882579,
+            "H_S_total": 1.740339655758783,
+            "u_star": null,
+            "z0": null,
+            "L": null,
+            "u_10m": null
+        }
+    }
+]
