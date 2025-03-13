@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const year = missionData.start_time ? missionData.start_time.slice(0, 4) : 'defaultYear';
                 const stormId = stormName.toLowerCase();
                 const missionId = missionData.mission_number;
-                const imageUrl = `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`;
+                const imageUrl = `blob/master/static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`;
                 console.log('Setting mission image URL:', imageUrl);
                 missionImage.src = imageUrl;
                 missionImage.style.display = 'block';
@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function showMissionImagePopup(initialSrc, stormName, year, missionId) {
         const imageSources = [
-            { src: `static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF" },
-            { src: `static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature" },
-            { src: `static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient" },
-            { src: `static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "Pressure" },
+            { src: `blob/master/static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF" },
+            { src: `blob/master/static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature" },
+            { src: `blob/master/static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient" },
+            { src: `blob/master/static/images/mission/${stormName.toLowerCase()}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "Pressure" },
         ];
 
         const popup = document.createElement('div');
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const missionId = missionData.mission_number;
 
             const thumbnails = [
-                { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF", header: "3D Wind" },
-                { src: `static/images/mission/${stormId}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature", header: "3D Temp" },
-                { src: `static/images/mission/${stormId}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient", header: "Pressure" },
-                { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "Pressure" },
+                { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF", header: "3D Wind" },
+                { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature", header: "3D Temp" },
+                { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient", header: "Pressure" },
+                { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "Pressure" },
             ];
 
             const itemsPerPage = 3;
@@ -224,10 +224,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.goToMissionPage = function(pageIndex, stormId, year, missionId) {
         const thumbnails = [
-            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF", header: "3D Wind" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature", header: "3D Temp" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient", header: "Pressure" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "Pressure" },
+            { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF", header: "3D Wind" },
+            { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature", header: "3D Temp" },
+            { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient", header: "Pressure" },
+            { src: `blob/master/static/images/mission/${stormId}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "Pressure" },
         ];
 
         const thumbnailRow = document.getElementById('mission-thumbnail-row');
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log('UI initializing with map:', window.map);
 
-        fetch('static/json/storm_catalog.json')
+        fetch('blob/master/static/json/storm_catalog.json')
             .then(response => {
                 if (!response.ok) throw new Error(`Failed to load storms.json: ${response.statusText}`);
                 return response.json();
@@ -303,13 +303,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     secondaryDropdown.innerHTML = '<option value="" disabled selected>Select Mission</option>';
                     missionList.forEach(mission => {
                         const option = document.createElement('option');
-                        option.value = `static/json/${selectedStormName}/${mission.filename}`;
+                        option.value = `blob/master/static/json/${selectedStormName}/${mission.filename}`;
                         option.textContent = `${selectedStormName} - Mission #${mission.mission_number} (${mission.number_of_observations} observations)`;
                         secondaryDropdown.appendChild(option);
                     });
 
                     if (missionList.length > 0) {
-                        const firstMissionFile = `static/json/${selectedStormName}/${missionList[0].filename}`;
+                        const firstMissionFile = `blob/master/static/json/${selectedStormName}/${missionList[0].filename}`;
                         secondaryDropdown.value = firstMissionFile;
                         console.log('Auto-selecting first mission:', firstMissionFile);
                         loadStormData(firstMissionFile);
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         const selectedStormName = primaryDropdown.value;
                         const selectedStorm = storms.find(storm => storm.storm_name === selectedStormName);
                         const selectedMission = selectedStorm.array_of_missions.find(mission => 
-                            `static/json/${selectedStormName}/${mission.filename}` === selectedFile);
+                            `blob/master/static/json/${selectedStormName}/${mission.filename}` === selectedFile);
                         console.log('Selected mission data:', selectedMission);
                         loadStormData(selectedFile);
                         updateHeader(selectedStormName, selectedMission);
@@ -338,11 +338,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     primaryDropdown.value = 'Alberto';
                     console.log('Auto-selecting Alberto on page load');
                     
-                    const firstMissionFile = `static/json/Alberto/${alberto.array_of_missions[0].filename}`;
+                    const firstMissionFile = `blob/master/static/json/Alberto/${alberto.array_of_missions[0].filename}`;
                     secondaryDropdown.innerHTML = '<option value="" disabled selected>Select Mission</option>';
                     alberto.array_of_missions.forEach(mission => {
                         const option = document.createElement('option');
-                        option.value = `static/json/Alberto/${mission.filename}`;
+                        option.value = `blob/master/static/json/Alberto/${mission.filename}`;
                         option.textContent = `Alberto - Mission #${mission.mission_number} (${mission.number_of_observations} observations)`;
                         secondaryDropdown.appendChild(option);
                     });
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const selectedStormName = primaryDropdown.value;
                 const selectedStorm = storms.find(storm => storm.storm_name === selectedStormName);
                 const selectedMission = selectedStorm.array_of_missions.find(mission => 
-                    `static/json/${selectedStormName}/${mission.filename}` === selectedFile);
+                    `blob/master/static/json/${selectedStormName}/${mission.filename}` === selectedFile);
                 console.log('Refresh clicked, reloading:', selectedFile);
                 loadStormData(selectedFile);
                 updateHeader(selectedStormName, selectedMission);
