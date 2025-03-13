@@ -41,8 +41,10 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
     `).join('');
 
     const firstLevel = entry.levels && entry.levels.length > 0 ? entry.levels[0] : {};
-    stormName = entry.basic_info.storm_name.charAt(0).toUpperCase() + entry.basic_info.storm_name.slice(1);
-    // Thumbnail data
+    const stormName = entry.basic_info.storm_name.charAt(0).toUpperCase() + 
+                     entry.basic_info.storm_name.slice(1).toLowerCase();
+
+    // Thumbnail data with properly formatted stormName
     const thumbnails = [
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.png`, alt: "Skew-T", header: "Skew-T" },
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
@@ -55,7 +57,6 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
     const itemsPerPage = 3;
     const totalPages = Math.ceil(thumbnails.length / itemsPerPage);
 
-    // Generate page number buttons
     const pageButtons = Array.from({ length: totalPages }, (_, i) => `
         <button class="carousel-page-btn ${i === 0 ? 'active' : ''}" 
                 onclick="goToPage(${i}, this.closest('.thumbnail-carousel'))">${i + 1}</button>
@@ -65,7 +66,7 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
         <div class="material-popup">
             <div class="popup-header">
                 <div class="header-img" style="background-color: ${arrowColor}">
-                    <h3>${entry.basic_info.storm_name || 'Unknown'}</h3>
+                    <h3>${stormName}</h3>
                     <p>${entry.basic_info.storm_type || 'Unknown'}</p>
                     <p>Mission #${entry.basic_info.mission_id || 'N/A'}</p>
                     <p>Obs #${entry.basic_info.observation_id || 'N/A'}</p>
@@ -81,20 +82,19 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
                     </div>
                     <div class="popup-row">
                         <span>Date/Time</span>
-                        <span>${entry.basic_info.year || 'N/A'}-${entry.basic_info.month || 'N/A'}-${entry.basic_info.day || 'N/A'} at ${(entry.basic_info.time ? entry.basic_info.time.slice(0, 2) + ':' + entry.basic_info.time.slice(2) : 'N/A')}
-</span>
+                        <span>${entry.basic_info.year || 'N/A'}-${entry.basic_info.month || 'N/A'}-${entry.basic_info.day || 'N/A'} at ${(entry.basic_info.time ? entry.basic_info.time.slice(0, 2) + ':' + entry.basic_info.time.slice(2) : 'N/A')}</span>
                     </div>
                 </div>
             </div>
             
-            <div class="thumbnail-carousel" data-storm="${entry.basic_info.storm_name}" data-year="${entry.basic_info.year}" data-mission="${entry.basic_info.mission_id}" data-obs="${entry.basic_info.observation_id}">
+            <div class="thumbnail-carousel" data-storm="${stormName}" data-year="${entry.basic_info.year}" data-mission="${entry.basic_info.mission_id}" data-obs="${entry.basic_info.observation_id}">
                 <div class="thumbnail-row" data-index="0">
                     ${thumbnails.slice(0, 3).map(thumb => `
                         <div style="position: relative;">
                             <img src="${thumb.src}" 
                                  alt="${thumb.alt}" 
                                  class="thumbnail" 
-                                 onclick="showImagePopup(this.src, '${entry.basic_info.storm_name}', '${entry.basic_info.year}', '${entry.basic_info.mission_id}', '${entry.basic_info.observation_id}')">
+                                 onclick="showImagePopup(this.src, '${stormName}', '${entry.basic_info.year}', '${entry.basic_info.mission_id}', '${entry.basic_info.observation_id}')">
                             <div class="thumbnail-header">${thumb.header}</div>
                         </div>
                     `).join('')}
@@ -204,7 +204,8 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
 }
 
 function moveCarousel(direction, carousel) {
-    const stormName = carousel.getAttribute('data-storm');
+    const stormName = carousel.getAttribute('data-storm').charAt(0).toUpperCase() + 
+                     carousel.getAttribute('data-storm').slice(1).toLowerCase();
     const year = carousel.getAttribute('data-year');
     const missionId = carousel.getAttribute('data-mission');
     const observationId = carousel.getAttribute('data-obs');
@@ -239,14 +240,14 @@ function moveCarousel(direction, carousel) {
         </div>
     `).join('');
 
-    // Update active page button
     pageButtons.forEach((btn, i) => {
         btn.classList.toggle('active', i === index);
     });
 }
 
 function goToPage(pageIndex, carousel) {
-    const stormName = carousel.getAttribute('data-storm');
+    const stormName = carousel.getAttribute('data-storm').charAt(0).toUpperCase() + 
+                     carousel.getAttribute('data-storm').slice(1).toLowerCase();
     const year = carousel.getAttribute('data-year');
     const missionId = carousel.getAttribute('data-mission');
     const observationId = carousel.getAttribute('data-obs');
@@ -277,20 +278,20 @@ function goToPage(pageIndex, carousel) {
         </div>
     `).join('');
 
-    // Update active page button
     pageButtons.forEach((btn, i) => {
         btn.classList.toggle('active', i === pageIndex);
     });
 }
 
 function showImagePopup(initialSrc, stormName, year, missionId, observationId) {
+    const formattedStormName = stormName.charAt(0).toUpperCase() + stormName.slice(1).toLowerCase();
     const imageSources = [
-        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`,
-        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`,
-        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`,
-        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`,
-        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`,
-        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_skewt.png`,
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_winds.png`,
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_hodograph.png`,
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_shear.png`,
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_theta.png`,
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_mflux.png`
     ];
 
     const popup = document.createElement('div');
