@@ -44,12 +44,12 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
 
     // Thumbnail data
     const thumbnails = [
-        { src: `blob/master/static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.png`, alt: "Skew-T", header: "Skew-T" },
-        { src: `blob/master/static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
-        { src: `blob/master/static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
-        { src: `blob/master/static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
-        { src: `blob/master/static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_theta.png`, alt: "Thermodynamics", header: "Theta" },
-        { src: `blob/master/static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
+        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.png`, alt: "Skew-T", header: "Skew-T" },
+        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
+        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
+        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
+        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_theta.png`, alt: "Thermodynamics", header: "Theta" },
+        { src: `static/images/dropsonde/${entry.basic_info.storm_name}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
     ];
 
     const itemsPerPage = 3;
@@ -210,12 +210,12 @@ function moveCarousel(direction, carousel) {
     const observationId = carousel.getAttribute('data-obs');
 
     const thumbnails = [
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`, alt: "Skew-T Diagram", header: "Skew-T Diagram" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`, alt: "Thermodynamics", header: "Thermodynamics" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`, alt: "Skew-T Diagram", header: "Skew-T Diagram" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`, alt: "Thermodynamics", header: "Thermodynamics" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
     ];
 
     const row = carousel.querySelector('.thumbnail-row');
@@ -252,12 +252,12 @@ function goToPage(pageIndex, carousel) {
     const observationId = carousel.getAttribute('data-obs');
 
     const thumbnails = [
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`, alt: "Skew-T Diagram", header: "Skew-T Diagram" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`, alt: "Thermodynamics", header: "Thermodynamics" },
-        { src: `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`, alt: "Skew-T Diagram", header: "Skew-T Diagram" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`, alt: "Wind Profile", header: "Wind Profile" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`, alt: "Hodograph", header: "Hodograph" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`, alt: "Shear Profile", header: "Shear Profile" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`, alt: "Thermodynamics", header: "Thermodynamics" },
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`, alt: "Moisture Flux", header: "Moisture Flux" }
     ];
 
     const row = carousel.querySelector('.thumbnail-row');
@@ -285,12 +285,12 @@ function goToPage(pageIndex, carousel) {
 
 function showImagePopup(initialSrc, stormName, year, missionId, observationId) {
     const imageSources = [
-        `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`,
-        `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`,
-        `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`,
-        `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`,
-        `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`,
-        `blob/master/static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.png`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.png`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.png`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.png`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.png`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.png`
     ];
 
     const popup = document.createElement('div');
