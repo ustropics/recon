@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (missionImage) {
             if (missionData.mission_number && stormName) {
                 const year = missionData.start_time ? missionData.start_time.slice(0, 4) : 'defaultYear';
-                const stormId = stormName.toLowerCase();
+                const stormId = stormName;
                 const missionId = missionData.mission_number;
                 const imageUrl = `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`;
                 console.log('Setting mission image URL:', imageUrl);
