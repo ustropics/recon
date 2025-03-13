@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (missionData.mission_number && stormName) {
             const year = missionData.start_time ? missionData.start_time.slice(0, 4) : 'defaultYear';
-            const stormId = stormName.toLowerCase();
+            const stormId = stormName;
             const missionId = missionData.mission_number;
 
             const thumbnails = [
