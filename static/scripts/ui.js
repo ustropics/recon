@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const year = missionData.start_time ? missionData.start_time.slice(0, 4) : 'defaultYear';
                 const stormId = stormName;
                 const missionId = missionData.mission_number;
-                const imageUrl = `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`;
+                const imageUrl = `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`;
                 console.log('Setting mission image URL:', imageUrl);
                 missionImage.src = imageUrl;
                 missionImage.style.display = 'block';
@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function showMissionImagePopup(initialSrc, stormName, year, missionId) {
         const imageSources = [
-            { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind/Flux" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.png`, alt: "2D P/Wind", header: "Pressure" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.png`, alt: "2D Flux/Wind" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind/Flux" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "2D P/Wind", header: "Pressure" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "2D Flux/Wind" },
         ];
 
         const popup = document.createElement('div');
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const missionId = missionData.mission_number;
 
             const thumbnails = [
-                { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF", header: "3D Wind/Flux" },
-                { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature", header: "3D Temp" },
-                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "2D Wind/Flux" },
-                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient", header: "2D Pressure" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Wind/Flux" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "Pressure Gradient", header: "2D Wind/Flux" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "Pressure Gradient", header: "2D Pressure" },
             ];
 
             const itemsPerPage = 3;
@@ -224,10 +224,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.goToMissionPage = function(pageIndex, stormId, year, missionId) {
         const thumbnails = [
-            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.png`, alt: "3D Wind LHF", header: "3D Wind/Flux" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_3dtemp.png`, alt: "3D Temperature", header: "3D Temp" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.png`, alt: "Pressure Gradient", header: "2D Wind/Flux" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradP.png`, alt: "Pressure Gradient", header: "2D Pressure" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Wind/Flux" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.webp`, alt: "Pressure Gradient", header: "2D Wind/Flux" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradP.webp`, alt: "Pressure Gradient", header: "2D Pressure" },
         ];
 
         const thumbnailRow = document.getElementById('mission-thumbnail-row');
