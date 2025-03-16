@@ -49,17 +49,12 @@
                     <div class="thumbnail-row" id="mission-thumbnail-row" data-index="0">
                         <!-- Thumbnails will be populated via JS -->
                     </div>
-                    <div class="mission-carousel" id="mission-carousel">
-                        <div class="thumbnail-row" id="mission-thumbnail-row" data-index="0">
-                            <!-- Thumbnails will be populated via JS -->
+                    <div class="carousel-controls" id="mission-carousel-controls">
+                        <button class="carousel-nav-btn" id="prev-btn" disabled><span class="material-icons">arrow_back</span></button>
+                        <div class="pagination-buttons" id="pagination-buttons">
+                            <!-- Pagination buttons will be populated via JS -->
                         </div>
-                        <div class="carousel-controls" id="mission-carousel-controls">
-                            <button class="carousel-nav-btn" id="prev-btn" disabled><span class="material-icons">arrow_back</span></button>
-                            <div class="pagination-buttons" id="pagination-buttons">
-                                <!-- Pagination buttons will be populated via JS -->
-                            </div>
-                            <button class="carousel-nav-btn" id="next-btn"><span class="material-icons">arrow_forward</span></button>
-                        </div>
+                        <button class="carousel-nav-btn" id="next-btn"><span class="material-icons">arrow_forward</span></button>
                     </div>
                 </div>
             </div>
@@ -83,6 +78,13 @@
             <span class="material-icons">info</span>
         </div>
         <div class="legend-content" id="legend-content">
+            <div class="legend-header">Legend Controls</div>
+            <select id="measurement-dropdown" class="material-dropdown">
+                <option value="wind_speed" selected>Wind Speed</option>
+                <option value="pressure">Pressure</option>
+                <option value="latent_heat_flux">Latent Heat Flux (Total)</option>
+                <option value="sensible_heat_flux">Sensible Heat Flux (Total)</option>
+            </select>
             <h3>Wind Speed Legend</h3>
             <div><span style="background: #ed098e"></span> Cat 5 (157.5+ mph)</div>
             <div><span style="background: #602778"></span> Cat 4 (130-157 mph)</div>

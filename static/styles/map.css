@@ -26,18 +26,14 @@
 }
 
 .material-popup::-webkit-scrollbar-thumb {
-    background: #2196F3;
+    background: #0a9696;
     border-radius: 4px;
     transition: background 0.3s ease;
 }
 
-.material-popup::-webkit-scrollbar-thumb:hover {
-    background: #673AB7;
-}
-
 .material-popup {
     scrollbar-width: thin;
-    scrollbar-color: #2196F3 #f1f1f1;
+    scrollbar-color: #0a9696 #f1f1f1;
 }
 
 .popup-header {
@@ -128,20 +124,26 @@
 }
 
 .carousel-arrow {
-    background: #2196F3;
+    background: #0a9696;
     color: white;
     border: none;
     border-radius: 4px; /* Rounded square */
     width: 20px;
     height: 20px;
-    font-size: 14px;
+    font-size: 8px !important;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     position: relative;
 }
 
+.carousel-arrow .material-icons {
+    padding-top: 2px; /* Center icon vertically */
+    font-size: 14px; /* Adjusted to fit smaller button size */
+    color: inherit; /* Inherits white from parent */
+}
+
 .carousel-arrow:hover {
-    background: #1976D2; /* Darker blue on hover */
+    background: #0a9696; /* Darker blue on hover */
     transform: scale(1.05); /* Slight scale-up effect */
 }
 
@@ -163,14 +165,14 @@
 }
 
 .carousel-page-btn.active {
-    background: #2196F3; /* Match arrow color for active state */
+    background: #0a9696; /* Match arrow color for active state */
     color: white;
-    border-color: #2196F3;
+    border-color: #107979;
     font-weight: bold;
 }
 
 .carousel-page-btn.active:hover {
-    background: #1976D2; /* Darker blue on hover for active state */
+    background: #0a9696; /* Darker blue on hover for active state */
 }
 
 .popup-section {
@@ -299,18 +301,18 @@ td {
 }
 
 .leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar-thumb:hover {
-    background: #1976D2; /* Darker blue on hover */
+    background: #0a9696; /* Darker blue on hover */
     transform: scale(1.1); /* Slight scale-up */
 }
 
 .leaflet-popup-content.leaflet-popup-scrolled::-webkit-scrollbar-thumb:active {
-    background: #1565C0; /* Even darker blue when clicked */
+    background: #0a9696; /* Even darker blue when clicked */
 }
 
 /* Firefox Scrollbar Styling */
 .leaflet-popup-content.leaflet-popup-scrolled {
     scrollbar-width: thin; /* Slim scrollbar */
-    scrollbar-color: #2196F3 #f5f5f5; /* Thumb blue, track light gray */
+    scrollbar-color: #0a9696 #f5f5f5; /* Thumb blue, track light gray */
 }
 
 .custom-popup .leaflet-popup-content-wrapper {
@@ -391,4 +393,29 @@ td {
 
 .popup-close-btn:hover {
     background: #ddd;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Space between buttons */
+}
+
+.material-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.material-btn:hover {
+    background-color: #0056b3;
+}
+
+.material-btn:active {
+    background-color: #004085;
 }

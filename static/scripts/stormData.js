@@ -1,11 +1,111 @@
 // stormData.js
+
+function knotsToMph(knots) {
+    return knots * 1.15078;
+}
+
+const colorSchemes = {
+    wind_speed: [
+        { min: 157.5, color: '#ed098e', label: 'Cat 5 (157.5+ mph)' },
+        { min: 130, color: '#602778', label: 'Cat 4 (130-157 mph)' },
+        { min: 111, color: '#f43445', label: 'Cat 3 (111-129 mph)' },
+        { min: 96, color: '#ff8a02', label: 'Cat 2 (96-110 mph)' },
+        { min: 74, color: '#fad716', label: 'Cat 1 (74-95 mph)' },
+        { min: 39, color: '#00ba73', label: 'Tropical Storm (39-73 mph)' },
+        { min: 0, color: '#02418b', label: 'Below TS (<39 mph)' }
+    ],
+    pressure: [
+        { min: Infinity, max: 920, color: '#ed098e', label: '<920 hPa (Extreme)' },
+        { min: 920, max: 944, color: '#602778', label: '920-944 hPa (Cat 4+)' },
+        { min: 944, max: 965, color: '#f43445', label: '944-965 hPa (Cat 3)' },
+        { min: 965, max: 980, color: '#ff8a02', label: '965-980 hPa (Cat 2)' },
+        { min: 980, max: 995, color: '#fad716', label: '980-995 hPa (Cat 1)' },
+        { min: 995, max: 1010, color: '#00ba73', label: '995-1010 hPa (TS)' },
+        { min: 1010, max: Infinity, color: '#02418b', label: '>1010 hPa (Weak)' }
+    ],
+    latent_heat_flux: [
+        { min: 400, color: '#ed098e', label: '>400 W/m² (Extreme)' },
+        { min: 300, color: '#602778', label: '300-400 W/m² (Very High)' },
+        { min: 200, color: '#f43445', label: '200-300 W/m² (High)' },
+        { min: 100, color: '#ff8a02', label: '100-200 W/m² (Moderate)' },
+        { min: 50, color: '#fad716', label: '50-100 W/m² (Low)' },
+        { min: 25, color: '#00ba73', label: '25-50 W/m² (Very Low)' },
+        { min: 0, color: '#02418b', label: '<25 W/m² (Minimal)' }
+    ],
+    sensible_heat_flux: [
+        { min: 200, color: '#ed098e', label: '>200 W/m² (Extreme)' },
+        { min: 150, color: '#602778', label: '150-200 W/m² (Very High)' },
+        { min: 100, color: '#f43445', label: '100-150 W/m² (High)' },
+        { min: 50, color: '#ff8a02', label: '50-100 W/m² (Moderate)' },
+        { min: 25, color: '#fad716', label: '25-50 W/m² (Low)' },
+        { min: 10, color: '#00ba73', label: '10-25 W/m² (Very Low)' },
+        { min: 0, color: '#02418b', label: '<10 W/m² (Minimal)' }
+    ]
+};
+
+function getMeasurementColor(value, measurementType) {
+    const scheme = colorSchemes[measurementType] || colorSchemes.wind_speed;
+    for (const range of scheme) {
+        if (measurementType === 'wind_speed' && value >= range.min) {
+            return range.color;
+        } else if (measurementType === 'pressure' && value >= range.min && value < range.max) {
+            return range.color;
+        } else if ((measurementType === 'latent_heat_flux' || measurementType === 'sensible_heat_flux') && value >= range.min) {
+            return range.color;
+        }
+    }
+    return scheme[scheme.length - 1].color;
+}
+
+function updateLegend(measurementType) {
+    const legendContent = document.getElementById('legend-content');
+    if (!legendContent) return;
+
+    const scheme = colorSchemes[measurementType] || colorSchemes.wind_speed;
+    const title = {
+        'wind_speed': 'Wind Speed',
+        'pressure': 'Pressure',
+        'latent_heat_flux': 'Latent Heat Flux',
+        'sensible_heat_flux': 'Sensible Heat Flux'
+    }[measurementType] || 'Wind Speed';
+
+    legendContent.innerHTML = `
+        <div class="legend-header">Storm Controls</div>
+        <select id="measurement-dropdown" class="material-dropdown">
+            <option value="wind_speed" ${measurementType === 'wind_speed' ? 'selected' : ''}>Wind Speed</option>
+            <option value="pressure" ${measurementType === 'pressure' ? 'selected' : ''}>Pressure</option>
+            <option value="latent_heat_flux" ${measurementType === 'latent_heat_flux' ? 'selected' : ''}>Latent Heat Flux (Total)</option>
+            <option value="sensible_heat_flux" ${measurementType === 'sensible_heat_flux' ? 'selected' : ''}>Sensible Heat Flux (Total)</option>
+        </select>
+        <h3>${title} Legend</h3>
+        ${scheme.map(item => `<div><span style="background: ${item.color}"></span> ${item.label}</div>`).join('')}
+    `;
+
+    const measurementDropdown = document.getElementById('measurement-dropdown');
+    measurementDropdown.addEventListener('change', handleMeasurementChange);
+}
+
+function handleMeasurementChange() {
+    const measurementType = this.value;
+    const secondaryDropdown = document.getElementById('secondary-dropdown');
+    const selectedFile = secondaryDropdown.value;
+    if (selectedFile) {
+        console.log('Measurement type changed to:', measurementType, 'reloading:', selectedFile);
+        loadStormData(selectedFile);
+    } else {
+        console.warn('No mission selected to reload with new measurement type');
+        updateLegend(measurementType);
+    }
+}
+
 function loadStormData(filePath) {
     if (!window.map) {
         console.error('Map not initialized yet! Cannot load storm data.');
         return;
     }
 
-    console.log('Loading storm data from:', filePath);
+    const measurementType = document.getElementById('measurement-dropdown')?.value || 'wind_speed';
+    console.log('Loading storm data from:', filePath, 'with measurement:', measurementType);
 
     fetch(filePath)
         .then(response => {
@@ -16,17 +116,14 @@ function loadStormData(filePath) {
             console.log('Storm data loaded:', data);
             const stormData = Array.isArray(data) ? data : [data];
 
-            // Clear existing markers
             window.map.eachLayer(layer => {
                 if (layer instanceof L.Marker) {
                     window.map.removeLayer(layer);
                 }
             });
 
-            // Remove existing popupopen listeners to prevent accumulation
             window.map.off('popupopen');
 
-            // Add new markers
             stormData.forEach((entry, index) => {
                 console.log(`Processing entry ${index}:`, entry);
                 if (!entry || !entry.basic_info || !entry.basic_info.lat || !entry.basic_info.lon) {
@@ -39,7 +136,17 @@ function loadStormData(filePath) {
                 const windDir = entry.levels && entry.levels.length > 0 ? parseInt(entry.levels[0].wind_dir) : 0;
                 const windSpdKnots = entry.levels && entry.levels.length > 0 ? parseInt(entry.levels[0].wind_spd) : 0;
                 const windSpdMph = knotsToMph(windSpdKnots);
-                const arrowColor = getWindSpeedColor(windSpdMph);
+                const pressure = entry.levels && entry.levels.length > 0 ? parseFloat(entry.levels[0].pressure) : 1013;
+                const latentHeatFlux = entry.levels && entry.levels.length > 0 ? parseFloat(entry.levels[0].latent_heat_flux) || 0 : 0;
+                const sensibleHeatFlux = entry.levels && entry.levels.length > 0 ? parseFloat(entry.levels[0].sensible_heat_flux) || 0 : 0;
+
+                const value = {
+                    'wind_speed': windSpdMph,
+                    'pressure': pressure,
+                    'latent_heat_flux': latentHeatFlux,
+                    'sensible_heat_flux': sensibleHeatFlux
+                }[measurementType];
+                const arrowColor = getMeasurementColor(value, measurementType);
 
                 const popupContent = generatePopupContent(entry, windSpdMph, arrowColor);
 
@@ -58,31 +165,30 @@ function loadStormData(filePath) {
                     });
             });
 
-            // Adjust map view with fixed zoom
             const bounds = L.latLngBounds(stormData.map(entry => [entry.basic_info.lat, -Math.abs(entry.basic_info.lon)]));
             if (bounds.isValid()) {
                 const center = bounds.getCenter();
-                const fixedZoomLevel = 7; // Set your desired zoom level here
+                const fixedZoomLevel = 7;
                 window.map.setView(center, fixedZoomLevel);
             }
 
-            // Add collapsible functionality for each popup
             window.map.on('popupopen', function(e) {
-                const popupElement = e.popup._contentNode; // Get the popup's DOM content
+                const popupElement = e.popup._contentNode;
                 const headers = popupElement.querySelectorAll('.collapsible-header');
                 headers.forEach(header => {
-                    // Remove any existing listeners to avoid duplicates
                     header.removeEventListener('click', toggleCollapsible);
-                    // Add new listener
                     header.addEventListener('click', toggleCollapsible);
                 });
             });
 
-            // Define the toggle function outside the loop for reuse
             function toggleCollapsible() {
                 const section = this.parentElement;
                 section.classList.toggle('active');
             }
+
+            updateLegend(measurementType);
         })
         .catch(error => console.error('Error loading JSON:', error));
 }
+
+window.loadStormData = loadStormData;

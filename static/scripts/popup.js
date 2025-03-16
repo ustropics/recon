@@ -32,19 +32,53 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
         </tr>
     `).join('');
 
-    const calcKeys = Object.keys(entry.calculations || {});
-    const calcContent = calcKeys.map(key => `
-        <tr>
-            <td>${key}</td>
-            <td>${entry.calculations[key] !== null ? entry.calculations[key].toFixed(6) : 'N/A'}</td>
-        </tr>
-    `).join('');
+    const calcLabels = {
+        "H_L_int": { label: "H<sub>L,int</sub>", desc: "Latent heat flux (interface)", unit: "W/m²" },
+        "Q_L": { label: "Q<sub>L</sub>", desc: "Sea spray-induced latent heat flux", unit: "W/m²" },
+        "H_L_total": { label: "H<sub>L,total</sub>", desc: "Total latent heat flux", unit: "W/m²" },
+        "H_S_int": { label: "H<sub>S,int</sub>", desc: "Sensible heat flux (interface)", unit: "W/m²" },
+        "Q_S": { label: "Q<sub>S</sub>", desc: "Sea spray-induced sensible heat flux", unit: "W/m²" },
+        "H_S_total": { label: "H<sub>S,total</sub>", desc: "Total sensible heat flux", unit: "W/m²" },
+        "rho_a": { label: "ρ<sub>a</sub>", desc: "Air density", unit: "kg/m³" },
+        "es_Ts": { label: "e<sub>s</sub>(T<sub>s</sub>)", desc: "Saturation vapor pressure at SST", unit: "hPa" },
+        "qs": { label: "q<sub>s</sub>", desc: "Specific humidity at surface", unit: "kg/kg" },
+        "ea_Td": { label: "e<sub>a</sub>(T<sub>d</sub>)", desc: "Vapor pressure at dewpoint temperature", unit: "hPa" },
+        "q": { label: "q", desc: "Specific humidity", unit: "kg/kg" },
+        "ea_Ta": { label: "e<sub>a</sub>(T<sub>a</sub>)", desc: "Vapor pressure at air temperature", unit: "hPa" },
+        "qa": { label: "q<sub>a</sub>", desc: "Specific humidity at air", unit: "kg/kg" },
+        "W": { label: "W", desc: "Whitecap fraction", unit: "" },
+        "lambda_h": { label: "λ<sub>h</sub>", desc: "Scale height for spray layer", unit: "" },
+        "beta": { label: "β", desc: "Beta parameter", unit: "" },
+        "C_E": { label: "C<sub>E</sub>", desc: "Exchange coefficient", unit: "" }
+    };
+
+    const calcOrder = [
+        "H_L_int", "Q_L", "H_L_total", "H_S_int", "Q_S", "H_S_total",
+        "rho_a", "es_Ts", "ea_Td", "ea_Ta", "q", "qs", "qa", "W", "lambda_h", "beta", "C_E",
+    ];
+
+    function formatNumber(value) {
+        if (value === null) return 'N/A';
+        const absValue = Math.abs(value);
+        if (absValue < 0.01 && absValue > 0) {
+            return value.toExponential(2);
+        }
+        return value.toFixed(2);
+    }
+
+    const calcContent = calcOrder
+        .filter(key => entry.calculations && key in entry.calculations)
+        .map(key => `
+            <tr>
+                <td>${calcLabels[key] ? `${calcLabels[key].desc} [ ${calcLabels[key].label} ]` : key}</td>
+                <td>${entry.calculations[key] !== null ? `${formatNumber(entry.calculations[key])} ${calcLabels[key].unit}` : 'N/A'}</td>
+            </tr>
+        `).join('');
 
     const firstLevel = entry.levels && entry.levels.length > 0 ? entry.levels[0] : {};
     const stormName = entry.basic_info.storm_name.charAt(0).toUpperCase() + 
                      entry.basic_info.storm_name.slice(1).toLowerCase();
 
-    // Thumbnail data with properly formatted stormName
     const thumbnails = [
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.webp`, alt: "Skew-T", header: "Skew-T" },
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.webp`, alt: "Wind Profile", header: "Wind Profile" },
@@ -100,9 +134,9 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
                     `).join('')}
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-arrow left-arrow" onclick="moveCarousel(-1, this.closest('.thumbnail-carousel'))">◄</button>
+                    <button class="carousel-arrow left-arrow" onclick="moveCarousel(-1, this.closest('.thumbnail-carousel'))"><span class="material-icons">arrow_back</span></button>
                     ${pageButtons}
-                    <button class="carousel-arrow right-arrow" onclick="moveCarousel(1, this.closest('.thumbnail-carousel'))">►</button>
+                    <button class="carousel-arrow right-arrow" onclick="moveCarousel(1, this.closest('.thumbnail-carousel'))"><span class="material-icons">arrow_forward</span></button>
                 </div>
             </div>
 
@@ -186,7 +220,7 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
             </div>
 
             <div class="popup-section collapsible">
-                <h4 class="collapsible-header">Calculations (${calcKeys.length})</h4>
+                <h4 class="collapsible-header">Calculations (${calcOrder.filter(key => entry.calculations && key in entry.calculations).length})</h4>
                 <div class="collapsible-content">
                     <table>
                         <thead>
@@ -198,11 +232,60 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
                         <tbody>${calcContent}</tbody>
                     </table>
                 </div>
+                    <div class="popup-buttons">
+                        <button class="material-btn" onclick="saveJSON('${stormName}', '${entry.basic_info.year}', '${entry.basic_info.mission_id}', '${entry.basic_info.observation_id}', ${JSON.stringify(entry)})">Save JSON</button>
+                        <button class="material-btn" onclick="saveImages('${stormName}', '${entry.basic_info.year}', '${entry.basic_info.mission_id}', '${entry.basic_info.observation_id}')">Save Images</button>
+                    </div>
             </div>
         </div>
     `;
 }
 
+// Add save functions
+function saveJSON(stormName, year, missionId, observationId, entry) {
+    const jsonString = JSON.stringify(entry, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${stormName}_${year}_Mission${missionId}_Obs${observationId}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function saveImages(stormName, year, missionId, observationId) {
+    const imageUrls = [
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.webp`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.webp`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.webp`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_shear.webp`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_theta.webp`,
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_mflux.webp`
+    ];
+
+    imageUrls.forEach((url, index) => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+                return response.blob();
+            })
+            .then(blob => {
+                const a = document.createElement('a');
+                const objectUrl = URL.createObjectURL(blob);
+                a.href = objectUrl;
+                a.download = `${stormName}_${year}_Mission${missionId}_Obs${observationId}_${index + 1}.webp`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(objectUrl);
+            })
+            .catch(error => console.error('Error downloading image:', error));
+    });
+}
+
+// Rest of the file (moveCarousel, goToPage, showImagePopup) remains unchanged
 function moveCarousel(direction, carousel) {
     const stormName = carousel.getAttribute('data-storm').charAt(0).toUpperCase() + 
                      carousel.getAttribute('data-storm').slice(1).toLowerCase();
@@ -347,10 +430,4 @@ function showImagePopup(initialSrc, stormName, year, missionId, observationId) {
             closePopup();
         }
     };
-
-    document.querySelector('.material-popup').addEventListener('DOMNodeInserted', () => {
-        console.log('Popup width:', document.querySelector('.material-popup').offsetWidth);
-        console.log('Carousel width:', document.querySelector('.thumbnail-carousel').offsetWidth);
-        console.log('Thumbnail row width:', document.querySelector('.thumbnail-row').offsetWidth);
-    }, { once: true });
 }

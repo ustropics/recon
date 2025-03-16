@@ -76,26 +76,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function showMissionImagePopup(initialSrc, stormName, year, missionId) {
         const imageSources = [
-            { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind/Flux" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Latent" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dsensible.webp`, alt: "3D Sensible" },
             { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "2D P/Wind", header: "Pressure" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "2D Flux/Wind" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "2D Latent" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_shgradU.webp`, alt: "2D Sensible" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "2D Wind" },
         ];
-
+    
         const popup = document.createElement('div');
         popup.className = 'image-popup-overlay';
         popup.style.opacity = '0';
-
+    
         const imageContainer = document.createElement('div');
         imageContainer.className = 'image-container';
-
+    
         const mainImg = document.createElement('img');
         mainImg.src = initialSrc;
         mainImg.className = 'popup-image';
-
+    
+        // Create the magnifier element
+        const magnifier = document.createElement('div');
+        magnifier.className = 'magnifier';
+        imageContainer.appendChild(magnifier);
+    
         const thumbnailContainer = document.createElement('div');
         thumbnailContainer.className = 'popup-thumbnail-container';
-
+    
         imageSources.forEach(item => {
             const thumb = document.createElement('img');
             thumb.src = item.src;
@@ -110,32 +117,66 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             thumbnailContainer.appendChild(thumb);
         });
-
+    
         const closeBtn = document.createElement('button');
         closeBtn.innerHTML = '×';
         closeBtn.className = 'popup-close-btn';
-
+    
         imageContainer.appendChild(mainImg);
         imageContainer.appendChild(thumbnailContainer);
         popup.appendChild(imageContainer);
         popup.appendChild(closeBtn);
         document.body.appendChild(popup);
-
+    
         setTimeout(() => {
             popup.style.opacity = '1';
         }, 10);
-
+    
         const closePopup = () => {
             popup.style.opacity = '0';
             setTimeout(() => popup.remove(), 300);
         };
-
+    
         closeBtn.onclick = closePopup;
         popup.onclick = (e) => {
             if (e.target === popup) {
                 closePopup();
             }
         };
+    
+        // Magnifier functionality
+        const zoomLevel = 2; // Adjust zoom level as needed
+        mainImg.addEventListener('mousemove', (e) => {
+            const rect = mainImg.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+    
+            // Show magnifier
+            magnifier.style.display = 'block';
+    
+            // Calculate the background position for the zoomed effect
+            const bgX = -x * zoomLevel + magnifier.offsetWidth / 2;
+            const bgY = -y * zoomLevel + magnifier.offsetHeight / 2;
+    
+            // Set the magnified image as the background of the magnifier
+            magnifier.style.backgroundImage = `url(${mainImg.src})`;
+            magnifier.style.backgroundSize = `${rect.width * zoomLevel}px ${rect.height * zoomLevel}px`;
+            magnifier.style.backgroundPosition = `${bgX}px ${bgY}px`;
+    
+            // Position the magnifier near the cursor
+            magnifier.style.left = `${x - magnifier.offsetWidth / 2}px`;
+            magnifier.style.top = `${y - magnifier.offsetHeight / 2}px`;
+    
+            // Ensure the magnifier stays within the image bounds
+            const magLeft = Math.max(0, Math.min(x - magnifier.offsetWidth / 2, rect.width - magnifier.offsetWidth));
+            const magTop = Math.max(0, Math.min(y - magnifier.offsetHeight / 2, rect.height - magnifier.offsetHeight));
+            magnifier.style.left = `${magLeft}px`;
+            magnifier.style.top = `${magTop}px`;
+        });
+    
+        mainImg.addEventListener('mouseleave', () => {
+            magnifier.style.display = 'none'; // Hide magnifier when mouse leaves
+        });
     }
 
     function updateMissionCarousel(stormName, missionData) {
@@ -158,10 +199,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const missionId = missionData.mission_number;
 
             const thumbnails = [
-                { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Wind/Flux" },
-                { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
-                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "Pressure Gradient", header: "2D Wind/Flux" },
-                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "Pressure Gradient", header: "2D Pressure" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Latent", header: "3D Latent" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dsensible.webp`, alt: "3D Sensible", header: "3D Sensible" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "2D Latent", header: "2D Latent" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_shgradU.webp`, alt: "2D Sensible", header: "2D Sensible" },
+            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "2D Wind", header: "2D Wind" },
             ];
 
             const itemsPerPage = 3;
@@ -224,10 +267,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.goToMissionPage = function(pageIndex, stormId, year, missionId) {
         const thumbnails = [
-            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Wind/Flux" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Latent"  },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_3dsensible.webp`, alt: "3D Sensible", header: "3D Sensible" },
             { src: `static/images/mission/${stormId}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.webp`, alt: "Pressure Gradient", header: "2D Wind/Flux" },
-            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradP.webp`, alt: "Pressure Gradient", header: "2D Pressure" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.webp`, alt: "Pressure Gradient", header: "2D Latent" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_shgradU.webp`, alt: "2D Sensible", header: "2D Sensible" },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_ugradP.webp`, alt: "2D Flux/Wind", header: "2D Wind" },
         ];
 
         const thumbnailRow = document.getElementById('mission-thumbnail-row');
@@ -270,9 +315,9 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => initializeUI(attempt + 1, maxAttempts), 500);
             return;
         }
-
+    
         console.log('UI initializing with map:', window.map);
-
+    
         fetch('static/json/storm_catalog.json')
             .then(response => {
                 if (!response.ok) throw new Error(`Failed to load storms.json: ${response.statusText}`);
@@ -281,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 storms = data;
                 console.log('Storm catalog loaded:', storms);
-
+    
                 primaryDropdown.innerHTML = '<option value="" disabled selected>Select Storm</option>';
                 storms.forEach(storm => {
                     const option = document.createElement('option');
@@ -289,17 +334,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     option.textContent = storm.storm_name;
                     primaryDropdown.appendChild(option);
                 });
-
+    
                 primaryDropdown.addEventListener('change', function() {
                     const selectedStormName = this.value;
                     console.log('Primary dropdown changed to:', selectedStormName);
                     secondaryDropdown.disabled = false;
                     secondaryDropdown.value = '';
-
+    
                     const selectedStorm = storms.find(storm => storm.storm_name === selectedStormName);
                     const missionList = selectedStorm ? selectedStorm.array_of_missions : [];
                     console.log('Selected storm missions:', missionList);
-
+    
                     secondaryDropdown.innerHTML = '<option value="" disabled selected>Select Mission</option>';
                     missionList.forEach(mission => {
                         const option = document.createElement('option');
@@ -307,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         option.textContent = `${selectedStormName} - Mission #${mission.mission_number} (${mission.number_of_observations} observations)`;
                         secondaryDropdown.appendChild(option);
                     });
-
+    
                     if (missionList.length > 0) {
                         const firstMissionFile = `static/json/${selectedStormName}/${missionList[0].filename}`;
                         secondaryDropdown.value = firstMissionFile;
@@ -318,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         updateHeader(selectedStormName, {});
                     }
                 });
-
+    
                 secondaryDropdown.addEventListener('change', function() {
                     const selectedFile = this.value;
                     console.log('Secondary dropdown changed to:', selectedFile);
@@ -332,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         updateHeader(selectedStormName, selectedMission);
                     }
                 });
-
+    
                 const alberto = storms.find(storm => storm.storm_name === 'Alberto');
                 if (alberto && alberto.array_of_missions.length > 0) {
                     primaryDropdown.value = 'Alberto';
@@ -360,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .catch(error => console.error('Error loading storms.json:', error));
-
+    
         refreshButton.addEventListener('click', function() {
             const selectedFile = secondaryDropdown.value;
             if (selectedFile) {
@@ -375,16 +420,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Please select a storm and mission first!');
             }
         });
-
+    
         const legendToggle = document.getElementById('legend-toggle');
         const legendContent = document.getElementById('legend-content');
         let isOpen = false;
-
+    
         legendToggle.addEventListener('click', function() {
             isOpen = !isOpen;
             legendContent.style.display = isOpen ? 'block' : 'none';
         });
+    
+        // Initial legend setup with event listener
+        const measurementDropdown = document.getElementById('measurement-dropdown');
+        if (measurementDropdown) {
+            measurementDropdown.addEventListener('change', handleMeasurementChange);
+        }
     }
-
+    
     initializeUI();
 });

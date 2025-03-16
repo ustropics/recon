@@ -24,7 +24,7 @@
 }
 
 .legend-toggle .material-icons {
-    color: #2196F3;
+    color: #22b696;
     font-size: 24px;
 }
 
@@ -36,7 +36,7 @@
     position: absolute;
     top: 50px;
     right: 0;
-    width: 220px;
+    width: 260px;
     display: none;
 }
 
@@ -58,4 +58,33 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+.legend-content select.material-dropdown {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.legend-content select.material-dropdown:hover {
+    border-color: #888;
+    background-color: #fff;
+}
+
+.legend-content select.material-dropdown:focus {
+    outline: none;
+    border-color: #17987b;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
