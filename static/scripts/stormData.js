@@ -1,5 +1,8 @@
 // stormData.js
 
+// Flag to track if the page has loaded initially
+let hasLoadedInitially = false;
+
 function knotsToMph(knots) {
     return knots * 1.15078;
 }
@@ -115,6 +118,7 @@ function loadStormData(filePath) {
         .then(data => {
             console.log('Storm data loaded:', data);
             const stormData = Array.isArray(data) ? data : [data];
+            let firstMarker = null; // To store the first marker for auto-opening
 
             window.map.eachLayer(layer => {
                 if (layer instanceof L.Marker) {
@@ -157,12 +161,17 @@ function loadStormData(filePath) {
                     iconAnchor: [12, 12]
                 });
 
-                L.marker([lat, lon], { icon: arrowIcon }).addTo(window.map)
+                const marker = L.marker([lat, lon], { icon: arrowIcon }).addTo(window.map)
                     .bindPopup(popupContent, {
                         maxWidth: 500,
                         maxHeight: 400,
                         className: 'custom-popup'
                     });
+
+                // Store the first valid marker only if this is the initial load
+                if (index === 0 && !hasLoadedInitially) {
+                    firstMarker = marker;
+                }
             });
 
             const bounds = L.latLngBounds(stormData.map(entry => [entry.basic_info.lat, -Math.abs(entry.basic_info.lon)]));
@@ -170,6 +179,12 @@ function loadStormData(filePath) {
                 const center = bounds.getCenter();
                 const fixedZoomLevel = 7;
                 window.map.setView(center, fixedZoomLevel);
+            }
+
+            // Automatically open the popup for the first marker only on initial load
+            if (firstMarker && !hasLoadedInitially) {
+                firstMarker.openPopup();
+                hasLoadedInitially = true; // Set the flag to true after the first load
             }
 
             window.map.on('popupopen', function(e) {

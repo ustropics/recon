@@ -60,13 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const imageUrl = `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`;
                 console.log('Setting mission image URL:', imageUrl);
                 missionImage.src = imageUrl;
+                missionImage.onerror = () => {
+                    missionImage.src = 'static/images/default/no_image.jpg'; // Fallback to default image
+                };
                 missionImage.style.display = 'block';
                 missionImage.style.cursor = 'pointer';
-                // Update onclick to use current src
                 missionImage.onclick = () => showMissionImagePopup(missionImage.src, stormName, year, missionId);
             } else {
-                missionImage.src = '';
-                missionImage.style.display = 'none';
+                missionImage.src = 'static/images/default/no_image.jpg'; // Set default if no mission data
+                missionImage.style.display = 'block';
                 missionImage.onclick = null;
             }
         }
@@ -93,9 +95,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
         const mainImg = document.createElement('img');
         mainImg.src = initialSrc;
+        mainImg.onerror = () => {
+            mainImg.src = 'static/images/default/no_image.jpg'; // Fallback for main image
+        };
         mainImg.className = 'popup-image';
     
-        // Create the magnifier element
         const magnifier = document.createElement('div');
         magnifier.className = 'magnifier';
         imageContainer.appendChild(magnifier);
@@ -106,12 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
         imageSources.forEach(item => {
             const thumb = document.createElement('img');
             thumb.src = item.src;
+            thumb.onerror = () => {
+                thumb.src = 'static/images/default/no_image.jpg'; // Fallback for thumbnails
+            };
             thumb.className = 'popup-thumbnail';
             thumb.alt = item.alt;
             thumb.onclick = () => {
                 mainImg.style.opacity = '0';
                 setTimeout(() => {
                     mainImg.src = item.src;
+                    mainImg.onerror = () => {
+                        mainImg.src = 'static/images/default/no_image.jpg'; // Fallback again on change
+                    };
                     mainImg.style.opacity = '1';
                 }, 300);
             };
@@ -144,30 +154,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
     
-        // Magnifier functionality
-        const zoomLevel = 2; // Adjust zoom level as needed
+        const zoomLevel = 2;
         mainImg.addEventListener('mousemove', (e) => {
             const rect = mainImg.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
     
-            // Show magnifier
             magnifier.style.display = 'block';
     
-            // Calculate the background position for the zoomed effect
             const bgX = -x * zoomLevel + magnifier.offsetWidth / 2;
             const bgY = -y * zoomLevel + magnifier.offsetHeight / 2;
     
-            // Set the magnified image as the background of the magnifier
             magnifier.style.backgroundImage = `url(${mainImg.src})`;
             magnifier.style.backgroundSize = `${rect.width * zoomLevel}px ${rect.height * zoomLevel}px`;
             magnifier.style.backgroundPosition = `${bgX}px ${bgY}px`;
     
-            // Position the magnifier near the cursor
             magnifier.style.left = `${x - magnifier.offsetWidth / 2}px`;
             magnifier.style.top = `${y - magnifier.offsetHeight / 2}px`;
     
-            // Ensure the magnifier stays within the image bounds
             const magLeft = Math.max(0, Math.min(x - magnifier.offsetWidth / 2, rect.width - magnifier.offsetWidth));
             const magTop = Math.max(0, Math.min(y - magnifier.offsetHeight / 2, rect.height - magnifier.offsetHeight));
             magnifier.style.left = `${magLeft}px`;
@@ -175,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     
         mainImg.addEventListener('mouseleave', () => {
-            magnifier.style.display = 'none'; // Hide magnifier when mouse leaves
+            magnifier.style.display = 'none';
         });
     }
 
@@ -199,12 +203,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const missionId = missionData.mission_number;
 
             const thumbnails = [
-            { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Latent", header: "3D Latent" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_3dsensible.webp`, alt: "3D Sensible", header: "3D Sensible" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "2D Latent", header: "2D Latent" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_shgradU.webp`, alt: "2D Sensible", header: "2D Sensible" },
-            { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "2D Wind", header: "2D Wind" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Latent", header: "3D Latent" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_3dsensible.webp`, alt: "3D Sensible", header: "3D Sensible" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradQL.webp`, alt: "2D Latent", header: "2D Latent" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_shgradU.webp`, alt: "2D Sensible", header: "2D Sensible" },
+                { src: `static/images/mission/${stormName}${year}/${missionId}_ugradP.webp`, alt: "2D Wind", header: "2D Wind" },
             ];
 
             const itemsPerPage = 3;
@@ -215,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
             thumbnailRow.innerHTML = initialThumbs.map(thumb => `
                 <div class="thumbnail-wrapper">
                     <img src="${thumb.src}" alt="${thumb.alt}" class="mission-thumbnail" 
+                         onerror="this.src='static/images/default/no_image.jpg'" 
                          onclick="updateMainImage('${thumb.src}')">
                     <div class="thumbnail-header">${thumb.header}</div>
                 </div>
@@ -229,8 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         onclick="goToMissionPage(${i}, '${stormId}', ${year}, '${missionId}')">${i + 1}</button>
             `).join('');
 
-            prevBtn.disabled = true; // First page, disable "Prev"
-            nextBtn.disabled = totalPages <= 1; // Disable "Next" if only one page
+            prevBtn.disabled = true;
+            nextBtn.disabled = totalPages <= 1;
 
             prevBtn.onclick = () => {
                 const currentIndex = parseInt(thumbnailRow.getAttribute('data-index'));
@@ -261,13 +266,16 @@ document.addEventListener('DOMContentLoaded', function() {
         missionImage.style.opacity = '0';
         setTimeout(() => {
             missionImage.src = src;
+            missionImage.onerror = () => {
+                missionImage.src = 'static/images/default/no_image.jpg'; // Fallback for main image update
+            };
             missionImage.style.opacity = '1';
         }, 300);
     };
 
     window.goToMissionPage = function(pageIndex, stormId, year, missionId) {
         const thumbnails = [
-            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Latent"  },
+            { src: `static/images/mission/${stormId}${year}/${missionId}_3dwind_lhf.webp`, alt: "3D Wind LHF", header: "3D Latent" },
             { src: `static/images/mission/${stormId}${year}/${missionId}_3dsensible.webp`, alt: "3D Sensible", header: "3D Sensible" },
             { src: `static/images/mission/${stormId}${year}/${missionId}_3dtemp.webp`, alt: "3D Temperature", header: "3D Temp" },
             { src: `static/images/mission/${stormId}${year}/${missionId}_ugradQL.webp`, alt: "Pressure Gradient", header: "2D Latent" },
@@ -288,6 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
         thumbnailRow.innerHTML = thumbnails.slice(start, end).map(thumb => `
             <div class="thumbnail-wrapper">
                 <img src="${thumb.src}" alt="${thumb.alt}" class="mission-thumbnail" 
+                     onerror="this.src='static/images/default/no_image.jpg'" 
                      onclick="updateMainImage('${thumb.src}')">
                 <div class="thumbnail-header">${thumb.header}</div>
             </div>
@@ -430,7 +439,6 @@ document.addEventListener('DOMContentLoaded', function() {
             legendContent.style.display = isOpen ? 'block' : 'none';
         });
     
-        // Initial legend setup with event listener
         const measurementDropdown = document.getElementById('measurement-dropdown');
         if (measurementDropdown) {
             measurementDropdown.addEventListener('change', handleMeasurementChange);
