@@ -204,7 +204,7 @@
 .mission-carousel {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center !important;
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
@@ -214,7 +214,7 @@
 .thumbnail-row {
     display: flex;
     justify-content: start !important;
-    gap: 12px;
+    gap: 20px;
     width: 200px;
     overflow: hidden;
     transition: opacity 0.3s ease; /* Fade transition for thumbnails */
@@ -222,12 +222,12 @@
 
 .thumbnail-wrapper {
     position: relative;
-    width: 110px !important;
+    width: 120px !important;
     height: 75px !important;
 }
 
 .mission-thumbnail {
-    width: 110px !important;
+    width: 120px !important;
     height: 75px !important;
     object-fit: cover;
     border-radius: 4px;
