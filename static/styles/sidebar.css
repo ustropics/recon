@@ -4,7 +4,8 @@
     flex-direction: column;
     height: 100%;
     background: linear-gradient(405deg, #030b18 0%, #023750 100%);
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    width: 420px;
 }
 
 .sidebar-header {
@@ -203,6 +204,7 @@
 .mission-carousel {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
