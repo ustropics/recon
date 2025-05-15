@@ -10,7 +10,7 @@ function knotsToMph(knots) {
 const colorSchemes = {
     wind_speed: [
         { min: 157.5, color: '#ed098e', label: 'Cat 5 (157.5+ mph)' },
-        { min: 130, color: '#602778', label: 'Cat 4 (130-157 mph)' },
+        { min: 130, color: '#d505ff', label: 'Cat 4 (130-157 mph)' },
         { min: 111, color: '#f43445', label: 'Cat 3 (111-129 mph)' },
         { min: 96, color: '#ff8a02', label: 'Cat 2 (96-110 mph)' },
         { min: 74, color: '#fad716', label: 'Cat 1 (74-95 mph)' },

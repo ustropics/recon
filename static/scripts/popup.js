@@ -80,6 +80,7 @@ function generatePopupContent(entry, windSpdMph, arrowColor) {
                      entry.basic_info.storm_name.slice(1).toLowerCase();
 
     const thumbnails = [
+        { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_wind_profile.webp`, alt: "10m Wind Corr.", header: "10m Wind Corr." },
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_skewt.webp`, alt: "Skew-T", header: "Skew-T" },
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_winds.webp`, alt: "Wind Profile", header: "Wind Profile" },
         { src: `static/images/dropsonde/${stormName}${entry.basic_info.year}/${entry.basic_info.mission_id}${entry.basic_info.observation_id}_hodograph.webp`, alt: "Hodograph", header: "Hodograph" },
@@ -257,6 +258,7 @@ function saveJSON(stormName, year, missionId, observationId, entry) {
 
 function saveImages(stormName, year, missionId, observationId) {
     const imageUrls = [
+        `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_wind_profile.webp`,
         `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.webp`,
         `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.webp`,
         `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.webp`,
@@ -294,6 +296,7 @@ function moveCarousel(direction, carousel) {
     const observationId = carousel.getAttribute('data-obs');
 
     const thumbnails = [
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_wind_profile.webp`, alt: "10m Wind Corr.", header: "10m Wind Corr." },
         { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.webp`, alt: "Skew-T Diagram", header: "Skew-T Diagram" },
         { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.webp`, alt: "Wind Profile", header: "Wind Profile" },
         { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.webp`, alt: "Hodograph", header: "Hodograph" },
@@ -336,6 +339,7 @@ function goToPage(pageIndex, carousel) {
     const observationId = carousel.getAttribute('data-obs');
 
     const thumbnails = [
+        { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_wind_profile.webp`, alt: "10m Wind Corr.", header: "10m Wind Corr." },
         { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_skewt.webp`, alt: "Skew-T Diagram", header: "Skew-T Diagram" },
         { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_winds.webp`, alt: "Wind Profile", header: "Wind Profile" },
         { src: `static/images/dropsonde/${stormName}${year}/${missionId}${observationId}_hodograph.webp`, alt: "Hodograph", header: "Hodograph" },
@@ -369,6 +373,7 @@ function goToPage(pageIndex, carousel) {
 function showImagePopup(initialSrc, stormName, year, missionId, observationId) {
     const formattedStormName = stormName.charAt(0).toUpperCase() + stormName.slice(1).toLowerCase();
     const imageSources = [
+        `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_wind_profile.webp`,
         `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_skewt.webp`,
         `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_winds.webp`,
         `static/images/dropsonde/${formattedStormName}${year}/${missionId}${observationId}_hodograph.webp`,
